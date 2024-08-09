@@ -1,0 +1,15 @@
+.imageCon{
+    min-width: 300px;
+    position: relative;
+    height: 300px;
+    margin:20px ;
+}
+.containerCart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.containerCart h3{
+    color: var(--black-color);
+}

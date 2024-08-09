@@ -1,0 +1,56 @@
+[
+    {
+        "id":1,
+        "title":"Post 1",
+        "body":"Post1 MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.",
+        "category":"Social",
+        "author":"Rossie",
+        "subImageSrc": "/review1.jpg",
+        "imageSrc":"/socialLife.jpg"
+    },
+    {
+        "id":2,
+        "title":"Post 2",
+        "body":"Post2 MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.",
+        "category":"Social",
+        "author":"Simba",
+        "subImageSrc": "/review2.jpg",
+        "imageSrc":"/socialLife.jpg"
+    },
+    {
+        "id":3,
+        "title":"Post 3",
+        "body":"Post3 MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.",
+        "category":"Politics",
+        "author":"Lala",
+        "subImageSrc": "/review3.jpg",
+        "imageSrc":"/politics.jpg"
+    },
+    {
+        "id":4,
+        "title":"Post 4",
+        "body":"Post4 MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.",
+        "category":"Politics",
+        "author":"Nana",
+        "subImageSrc": "/review4.jpg",
+        "imageSrc":"/politics.jpg"
+    },
+    {
+        "id":5,
+        "title":"Post 5",
+        "body":"Post5 MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.",
+        "category":"Food",
+        "author":"Daniel",
+        "subImageSrc": "/review5.jpg",
+        "imageSrc":"/food.jpg"
+    },
+    {
+        "id":6,
+        "title":"Post 6",
+        "body":"Post6 MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.",
+        "category":"Food",
+        "author":"Juwon",
+        "subImageSrc": "/Image1.png",
+        "imageSrc":"/food.jpg"
+    }
+]

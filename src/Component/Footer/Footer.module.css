@@ -1,0 +1,84 @@
+.container{
+    background-color: var(--footer-bg);
+    padding: 100px 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.aboutMe{
+    flex-basis: 35%;
+    margin-bottom: 30px;
+}
+.aboutMe h1, .newsletter h1, .socialMedia p{
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.aboutMe p{
+    color: white;
+}
+.newsletter{
+    flex-basis:35% ;
+    margin-bottom: 30px;
+}
+.newsletter p{
+    color: white;
+}
+.newsletter .formCon{
+    width: 100%;
+}
+.formCon form{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.formCon form input{
+    flex: 1;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    outline: none;
+}
+.formCon form button{
+    padding: 15px;
+    border: none;
+    background-color: #6cafe9;
+    color: white;
+    font-size: 16px;
+}
+.socialMedia{
+    flex-basis: 10%;
+    margin-bottom: 30px;
+}
+.links{
+    display: flex;
+    align-items: center;
+}
+.links .iconLink{
+    color: white;
+    width: 50px;
+    height: 50px;
+}
+
+@media (max-width:850px){
+    .aboutMe{
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .socialMedia{
+        flex-basis: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .newsletter{
+        flex-basis:100% ;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+  }

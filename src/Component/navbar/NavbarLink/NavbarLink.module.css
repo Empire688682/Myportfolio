@@ -1,0 +1,25 @@
+.link{
+    text-decoration: none;
+    color: var(--menu-color);
+    transition: .5s ease-out;
+    padding: 10px 15px;
+    font-size: 15px;
+}
+.container .link:hover{
+    color: var(--link-color);
+    background-color: var(--bg-color);
+    padding: 10px 15px;
+}
+.container .active{
+    text-decoration: none;
+    color: var(--link-color);
+    background-color: var(--bg-color);
+    padding: 10px 15px;
+}
+
+@media (max-width:950px){
+    .link{
+        color: white;
+        padding: 10px 0;
+    }
+ }

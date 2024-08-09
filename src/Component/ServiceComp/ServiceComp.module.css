@@ -1,0 +1,56 @@
+.container{
+    padding: 50px 5%;
+}
+.conHead{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 70px;
+    margin-top: 50px;
+}
+.conHead h1{
+    margin-bottom: 20px;
+    color: var(--black-color);
+    font-weight: 700;
+}
+.serviceBox{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+.servicesCon{
+    flex-basis: 30%;
+    min-width: 300px;
+    text-align: center;
+}
+.servicesCon .icons{
+    font-size: 40px;
+    margin-bottom: 35px;
+}
+.servicesCon h2{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--black-color);
+}
+.H2AsHead{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: color .3s ease-in-out;
+}
+.servicesCon:hover .H2AsHead{
+    color: #6cafe9;
+}
+
+@media (max-width:850px){
+    .servicesCon{
+        flex-basis: 100%;
+        min-width: 300px;
+        text-align: center;
+    }
+  }

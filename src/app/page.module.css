@@ -1,0 +1,120 @@
+.homeContainer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 200px;
+  padding-bottom: 100px;
+  padding-left: 5%;
+  padding-right: 5%;
+  gap: 30px;  box-shadow: -21.213px 21.213px 30px 0px rgba(158, 158, 158, 0.3);
+}
+.exportCompCon{
+  background-color: var(--navbar-color);
+}
+.textCon{
+  flex-basis: 45%;
+  min-width: 300px;
+  margin-bottom: 50px;
+}
+.textCon h3{
+  font-weight: 400;
+  color: var(--black-color);
+}
+.textCon h1{
+  font-size: 40px;
+  margin: 20px 0;
+  color: var(--black-color);
+}
+.textCon button{
+  background-color: var(--link-color);
+  border: none;
+  padding: 20px 40px;
+  color: white;
+  font-weight: bold;
+  transition: .5s ease-out;
+  cursor: pointer;
+  margin: 15px 
+}
+.textCon button:hover{
+  box-shadow: 0 0 10px var(--link-color);
+}
+.imageCon{
+  flex-basis: 45%;
+  min-width: 300;
+  height: 400px;
+  position: relative;
+  margin: auto;
+}
+@media (max-width:850px){
+  .textCon{
+    flex-basis: 100%;
+    min-width: 300px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  .imageCon{
+    flex-basis: 100%;
+    min-width: 300px;
+    height: 400px;
+    position: relative;
+  }
+}
+.portfolio{
+  width: 90%;
+  margin: 0 auto;
+}
+.portfolioConHead{
+  text-align: center;
+}
+.portfolioConHead h1{
+  color: var(--black-color);
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.categories{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+.categories p{
+  font-weight: bold;
+  cursor: pointer;
+  font-weight: 500;
+}
+.portfolioCart{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 40px ;
+  justify-content: space-around;
+  gap: 30px;
+  padding-bottom: 30px;
+  border-bottom: 3px solid white;
+}
+.categories .active{
+  color: var(--link-color);
+}
+.category{
+  position: relative;
+  transition: .3s ease-in-out;
+}
+.category::before{
+  content: '';
+  width: 0%;
+  position: absolute;
+  background-color: var(--black-color);
+  height: 3px;
+  bottom: -2px;
+  border-radius: 50px;
+  transition: .3s ease-in-out;
+}
+.category:hover::before{
+  width: 100%;
+} 
