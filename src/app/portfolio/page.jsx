@@ -2,7 +2,7 @@
 import styles from './Portfolio.module.css'
 import { FaArrowRightLong } from "react-icons/fa6";
 import Link from 'next/link';
-import PortfolioCart from '@/Component/PortfolioCart/PortfolioCart';
+import PortfolioCart from '@/Component/PortfolioCart/PortfolioCart.jsx';
 import { datas } from '@/Component/PortfolioData/PortfolioData.js';
 import { useEffect, useState } from 'react';
 
