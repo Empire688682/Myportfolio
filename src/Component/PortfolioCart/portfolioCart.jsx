@@ -1,5 +1,6 @@
 import styles from './PortfolioCart.module.css';
 import Image from 'next/image';
+
 const PortfolioCart = ({data, category}) => {
   return (
     <div className={styles.container}>
