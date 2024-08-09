@@ -1,7 +1,7 @@
 import styles from './PortfolioCart.module.css';
 import Image from 'next/image';
 
-const PortfolioCart = ({data, category}) => {
+export const PortfolioCart = ({data, category}) => {
   return (
     <div className={styles.container}>
      <div className={styles.containerCart}>
@@ -14,5 +14,3 @@ const PortfolioCart = ({data, category}) => {
     </div>
   )
 }
-
-export default PortfolioCart;

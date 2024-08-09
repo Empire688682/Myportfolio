@@ -5,6 +5,7 @@ import styles from './page.module.css';
 import AboutComp from '@/Component/AboutComp/AboutComp';
 import ServiceComp from '@/Component/ServiceComp/ServiceComp';
 import HomePageBanner from '@/Component/HomePageBanner/HomePageBanner';
+import {PortfolioCart} from '@/Component/PortfolioCart/PortfolioCart';
 import { datas } from '@/Component/PortfolioData/PortfolioData';
 import { useState } from 'react';
 
@@ -71,6 +72,7 @@ const HomePage = () => {
                 datas.map((data) => {
                   if (data.subCategory === "AllLatest") {
                     if (category === data.category || category === "All") {
+                      return <PortfolioCart setCategory={setCategory} category={category} key={data.id} data={data} />;
                     }
                   }
                   return null;
