@@ -14,4 +14,4 @@ const PortfolioCart = ({data, category}) => {
   )
 }
 
-export default PortfolioCart
+export default PortfolioCart;
