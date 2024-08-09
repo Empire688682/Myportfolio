@@ -26,7 +26,7 @@ const Navbar = ({ theme, toggleTheme }) => {
               <img
                 src='/moon_icon.png'
                 alt='moon icon'
-                width="40px"
+                width="25px"
               />
             </div>
           ) : (
@@ -34,7 +34,7 @@ const Navbar = ({ theme, toggleTheme }) => {
               <img
                 src='/sun_icon.png'
                 alt='sun icon'
-                width="40px"
+                width="25px"
               />
             </div>
           )

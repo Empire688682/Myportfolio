@@ -2,6 +2,7 @@
 import styles from './Portfolio.module.css'
 import { FaArrowRightLong } from "react-icons/fa6";
 import Link from 'next/link';
+import PortfolioCart from '@/Component/PortfolioCart/PortfolioCart';
 import { datas } from '@/Component/PortfolioData/PortfolioData.js';
 import { useEffect, useState } from 'react';
 
@@ -55,6 +56,7 @@ const Portfolio = () => {
          {
           datas.map((data) =>{
            if(category === "All" || category === data.category){
+            return <PortfolioCart setCategory={setCategory} category={category} key={data.id} data={data}/>
            }
           })
          }
