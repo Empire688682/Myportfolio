@@ -40,7 +40,9 @@ const Navbar = ({ theme, toggleTheme }) => {
           )
         }
       </div>
-      <Links setShowMenu={setShowMenu} showMenu={showMenu} />
+      <div onClick={() =>setShowMenu(!showMenu)}>
+        <Links setShowMenu={setShowMenu} showMenu={showMenu} />
+      </div>
       <div className={styles.menuIcon}>
         {
           showMenu ? (
