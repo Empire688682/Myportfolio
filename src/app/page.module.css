@@ -1,4 +1,4 @@
-.homeContainer{
+.homeContainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -7,26 +7,32 @@
   padding-bottom: 100px;
   padding-left: 5%;
   padding-right: 5%;
-  gap: 30px;  box-shadow: -21.213px 21.213px 30px 0px rgba(158, 158, 158, 0.3);
+  gap: 30px;
+  box-shadow: -21.213px 21.213px 30px 0px rgba(158, 158, 158, 0.3);
 }
-.exportCompCon{
+
+.exportCompCon {
   background-color: var(--navbar-color);
 }
-.textCon{
+
+.textCon {
   flex-basis: 45%;
   min-width: 300px;
   margin-bottom: 50px;
 }
-.textCon h3{
+
+.textCon h3 {
   font-weight: 400;
   color: var(--black-color);
 }
-.textCon h1{
+
+.textCon h1 {
   font-size: 40px;
   margin: 20px 0;
   color: var(--black-color);
 }
-.textCon button{
+
+.textCon button {
   background-color: var(--link-color);
   border: none;
   padding: 20px 40px;
@@ -34,22 +40,47 @@
   font-weight: bold;
   transition: .5s ease-out;
   cursor: pointer;
-  margin: 15px 
+  margin: 15px;
 }
-.textCon button:hover{
+
+.textCon button:hover {
   box-shadow: 0 0 10px var(--link-color);
 }
-.imageCon{
+
+.imageCon {
   flex-basis: 45%;
   min-width: 300;
   height: 400px;
   position: relative;
   margin: auto;
 }
-.imageCon .homepage_img{
+
+.imageCon .homepage_img {
   border-radius: 50%;
+  animation: tumble 4s infinite ease-in-out;
+}
+
+@keyframes tumble {
+  0% {
+    transform: rotate3d(80, 1, 0, 0deg);
+  }
+  25% {
+    transform: rotate3d(1, 90, 0, 90deg);
+  }
+  50% {
+    transform: rotate3d(1, 90, 0, 180deg);
+  }
+  75% {
+    transform: rotate3d(1, 90, 0, 270deg);
+  }
+  100% {
+    transform: rotate3d(1, 90, 0, 360deg);
+  }
 }
 @media (max-width:850px){
+  .imageCon {
+    display: none;
+  }
   .textCon{
     flex-basis: 100%;
     min-width: 300px;
