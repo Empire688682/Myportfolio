@@ -42,7 +42,7 @@ const HomePage = () => {
           <button>DISCOVER NOW</button>
         </div>
         <div className={styles.imageCon}>
-          <Image
+          <Image className={styles.homepage_img}
             src='/about.png'
             alt=''
             fill

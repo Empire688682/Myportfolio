@@ -46,6 +46,9 @@
   position: relative;
   margin: auto;
 }
+.imageCon .homepage_img{
+  border-radius: 50%;
+}
 @media (max-width:850px){
   .textCon{
     flex-basis: 100%;
