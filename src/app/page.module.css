@@ -57,7 +57,7 @@
 
 .imageCon .homepage_img {
   border-radius: 50%;
-  animation: tumble 8s infinite ease-in-out;
+  animation: tumble 15s infinite ease-in-out;
 }
 
 @keyframes tumble {
