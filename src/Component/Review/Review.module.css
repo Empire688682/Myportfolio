@@ -1,0 +1,18 @@
+.review{
+  padding: 50px 5%;
+  background-color: aqua;
+}
+.img_Con{
+  position: relative;
+  width:300px ;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.review_slider{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+}

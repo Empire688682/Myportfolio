@@ -8,6 +8,7 @@ import HomePageBanner from '@/Component/HomePageBanner/HomePageBanner';
 import PortfolioCart from '@/Component/PortfolioComp/Portfolio';
 import { datas } from '@/Component/PortfolioData/PortfolioData';
 import { useState } from 'react';
+import Review from '@/Component/Review/Review';
 
 const HomePage = () => {
   const [category, setCategory] = useState("All");
@@ -81,6 +82,7 @@ const HomePage = () => {
             </div>
           </div>
         </div>
+        <Review/>
       </div>
     </div>
   );
