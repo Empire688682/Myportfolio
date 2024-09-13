@@ -39,7 +39,8 @@ const HomePage = () => {
         <div className={styles.textCon}>
           <h3>THIS IS ME</h3>
           <h1>Juwon Asehinde</h1>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque unde, at corporis aspernatur nihil maxime, nesciunt laboriosam nam veritatis minus earum quo eaque eum saepe vel adipisci! Consequuntur, impedit fugit?</p>
+          <p>A <b>Fullstack Web Developer</b> with a passion for building dynamic and efficient web applications that deliver seamless user experiences</p>
+          <p>Whether you're a small business or an enterprise, I offer tailored solutions to bring your vision to life—from engaging front-end designs to powerful, scalable back-end systems.</p>
           <button>DISCOVER NOW</button>
         </div>
         <div className={styles.imageCon}>
