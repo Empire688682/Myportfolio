@@ -40,8 +40,8 @@ const HomePage = () => {
         <div className={styles.textCon}>
           <h3>THIS IS ME</h3>
           <h1>Juwon Asehinde</h1>
-          <p>A <b>Fullstack Web Developer</b> with a passion for building dynamic and efficient web applications that deliver seamless user experiences</p>
-          <p>Whether you're a small business or an enterprise, I offer tailored solutions to bring your vision to life—from engaging front-end designs to powerful, scalable back-end systems.</p>
+          <p>A <b>Fullstack Web Developer</b> with a passion for building dynamic and efficient web applications that deliver seamless user experiences
+          Whether you&#39;re a small business or an enterprise, I offer tailored solutions to bring your vision to life—from engaging front-end designs to powerful, scalable back-end systems.</p>
           <Link href='/contact' className={styles.contactBtn}>Contact Me</Link>
         </div>
         <div className={styles.imageCon}>

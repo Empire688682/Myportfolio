@@ -6,7 +6,7 @@ const ServiceComp = () => {
     <div className={styles.container}>
       <div className={styles.conHead}>
         <h1>My Offered Services</h1>
-        <p>At Jay-Empire, I’m dedicated to providing a comprehensive suite of services designed to elevate your online presence and drive your business forward
+        <p>At Jay-Empire, I&#39;m dedicated to providing a comprehensive suite of services designed to elevate your online presence and drive your business forward
 
 </p>
       </div>
@@ -51,7 +51,7 @@ const ServiceComp = () => {
               <FaLaptopCode className={styles.icons} /> 
               SEO Optimization
               </h2>
-            <p>I implement best practices to enhance your website's visibility in search engines, driving organic traffic and helping your business reach a wider audience.</p>
+            <p>I implement best practices to enhance your website&#39;s visibility in search engines, driving organic traffic and helping your business reach a wider audience.</p>
           </div>
       </div>
     </div>

@@ -36,6 +36,9 @@
     margin-bottom: 10px;
     color: var(--black-color);
 }
+.servicesCon p{
+    line-height: 1.8;
+}
 .H2AsHead{
     display: flex;
     align-items: center;
