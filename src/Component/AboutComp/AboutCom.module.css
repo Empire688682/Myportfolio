@@ -20,9 +20,12 @@
   .textCon h1{
     font-size: 40px;
     margin: 20px 0;
-    color: var(--heading-color);
+;
   }
-  .textCon button{
+  .textCon p{
+    margin-bottom: 30px;
+  }
+  .textCon .linkBtn{
     background-color: var(--heading-color);
     border: none;
     padding: 20px 40px;
@@ -31,8 +34,9 @@
     transition: .5s ease-out;
     cursor: pointer;
     margin: 15px 0;
+    text-decoration: none;
   }
-  .textCon button:hover{
+  .textCon .linkBtn:hover{
     box-shadow: 0 0 10px var(--heading-color);
   }
   .imageCon{
@@ -40,6 +44,8 @@
     width: 70%;
     height: 400px;
     position: relative;
+    border-radius: 9px;
+    overflow: hidden;
   }
 
   @media (max-width:850px){
