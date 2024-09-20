@@ -15,7 +15,7 @@ const AboutComp = () => {
         <div className={styles.textCon}>
         <h3>ABOUT ME</h3>
         <h1>PERSONAL DETAILS</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque unde, at corporis aspernatur nihil maxime, nesciunt laboriosam nam veritatis minus earum quo eaque eum saepe vel adipisci! Consequuntur, impedit fugit?</p>
+        <p>I'm a skilled Fullstack Web Developer and Software Developer with experience in JavaScript, PHP, Node.js, and database management, with expertise in frameworks like React, Next.js, Three.js, and more. I'm advancing my career step by step, always eager to learn and grow. As a fast learner, I collaborate closely with clients to create efficient, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life.</p>
         <button>VIEW FULL DETAILS</button>
         </div>
    </div>

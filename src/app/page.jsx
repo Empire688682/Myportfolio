@@ -9,6 +9,7 @@ import PortfolioCart from '@/Component/PortfolioComp/Portfolio';
 import { datas } from '@/Component/PortfolioData/PortfolioData';
 import { useState } from 'react';
 import Review from '@/Component/Review/Review';
+import Link from 'next/link';
 
 const HomePage = () => {
   const [category, setCategory] = useState("All");
@@ -41,7 +42,7 @@ const HomePage = () => {
           <h1>Juwon Asehinde</h1>
           <p>A <b>Fullstack Web Developer</b> with a passion for building dynamic and efficient web applications that deliver seamless user experiences</p>
           <p>Whether you're a small business or an enterprise, I offer tailored solutions to bring your vision to life—from engaging front-end designs to powerful, scalable back-end systems.</p>
-          <button>DISCOVER NOW</button>
+          <Link href='/contact' className={styles.contactBtn}>Contact Me</Link>
         </div>
         <div className={styles.imageCon}>
           <Image className={styles.homepage_img}

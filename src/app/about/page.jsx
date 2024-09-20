@@ -31,16 +31,20 @@ const About = () => {
       <div className={styles.aboutHead}>
         <h1>About Me</h1>
         <div className={styles.headLinks}>
-          <Link href='/' style={{color:"white", textDecoration:"none"}}>Home</Link>
-          <FaArrowRightLong style={{width:"50px", color:"white"}} />
-          <Link href='/about' style={{color:"white", textDecoration:"none"}}>About Me</Link>
+          <Link href='/' style={{ color: "white", textDecoration: "none" }}>Home</Link>
+          <FaArrowRightLong style={{ width: "50px", color: "white" }} />
+          <Link href='/about' style={{ color: "white", textDecoration: "none" }}>About Me</Link>
         </div>
       </div>
-      <AboutComp/>
+      <AboutComp />
       <p className={styles.p}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quod vitae animi, nesciunt vero ratione totam est corporis, magnam fugiat minus? Mollitia aspernatur inventore itaque fuga! Sapiente atque voluptates fuga.
-        Ipsam consequuntur incidunt, ullam dolorem facere reiciendis aperiam quasi cupiditate modi magni voluptatibus voluptates rem quibusdam officiis illum nostrum quod eum repudiandae nihil consequatur iste dolor! Odio veniam accusamus laborum.
-        Asperiores delectus nulla quod tempore distinctio ab quam alias, harum ipsa? Quis blanditiis numquam consequuntur tenetur quo pariatur hic, tempora ea rerum praesentium, labore cum. Minima corporis libero delectus eligendi.
+        My journey into the world of technology began in a humble setting as a plumber, where I learned the importance of precision, problem-solving, and the value of hard work. While working with my hands to create functional systems, I discovered my true passion: building dynamic and efficient web applications that deliver seamless user experiences.
+
+        Transitioning from plumbing to tech wasn’t just a career change; it was a leap fueled by curiosity and the desire to make a meaningful impact. I immersed myself in the world of coding, mastering technologies like JavaScript, ReactJS, NextJS, NodeJS, and MongoDB. Each line of code became a new tool in my toolkit, allowing me to transform ideas into reality.
+
+        Today, I specialize in crafting tailored solutions for businesses of all sizes—whether you're a budding startup or an established enterprise. I bring your vision to life with engaging front-end designs and powerful, scalable back-end systems. My goal is to ensure that every application not only meets your expectations but also exceeds them, creating a delightful experience for your users.
+
+        Let’s work together to build something exceptional that reflects your unique brand and goals. I’m committed to delivering high-quality results and am excited to partner with you on your next project.
       </p>
     </div>
   )
