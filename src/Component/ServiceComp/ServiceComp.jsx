@@ -53,13 +53,6 @@ const ServiceComp = () => {
               </h2>
             <p>I implement best practices to enhance your website's visibility in search engines, driving organic traffic and helping your business reach a wider audience.</p>
           </div>
-          <div className={styles.servicesCon}>
-            <h2 className={styles.H2AsHead}> 
-              <FaLaptopCode className={styles.icons} /> 
-              Web Dvelopment
-              </h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita placeat voluptatum facilis dicta quod doloribus dolorum, sapiente obcaecati quaerat, atque dignissimos sed labore, asperiores velit in veniam ipsa similique nam.</p>
-          </div>
       </div>
     </div>
   )
