@@ -15,8 +15,8 @@ const Blog = () => {
       <div className={styles.blogCon}>
         <div className={styles.blogBanner}>
              <div className={styles.bloBannerCont}>
-             <h1>Dude Youre Getting a Telescope</h1>
-              <p>There is a moment in the life of any aspiring astronomer that it is time to buy that first</p>
+             <h1>A Clearer Vision, Tips and Techniques for Aspiring Developers</h1>
+              <p>Navigating the World of Web Development</p>
               <button>View More</button>
              </div>
         </div>

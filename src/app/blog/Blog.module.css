@@ -3,7 +3,7 @@
     margin-top: 70px;
 }
 .blogCon{
-    background-image: url('/blog-home-banner.jpg');
+    background-image: url('/coding.jpg');
     background-position: center;
     background-size: cover;
     object-fit: cover;
@@ -77,7 +77,7 @@
     left: 50%;
     width: 80%;
     transform: translateX(-50%) translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.7);
     height: 80%;
     display: flex;
     flex-direction: column;
