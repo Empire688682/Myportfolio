@@ -37,7 +37,8 @@ const About = () => {
         </div>
       </div>
       <AboutComp />
-      <p className={styles.p}>
+      <div className={styles.all_p}>
+      <p>
       My journey into the world of technology began in a humble setting as a plumber, where I learned the importance of precision, problem-solving, and hard work. While creating functional systems with my hands, I discovered my true passion: building dynamic and efficient web applications that deliver seamless user experiences.</p>
 
 <p>Transitioning from plumbing to tech wasn&#39;t just a career change; it was a leap driven by curiosity and the desire to make a meaningful impact. I immersed myself in the world of coding, mastering technologies like JavaScript, ReactJS, NextJS, NodeJS, and MongoDB. Each line of code became a new tool in my toolkit, allowing me to turn ideas into reality.</p>
@@ -46,6 +47,7 @@ const About = () => {
 
 <p>Let&#39;s collaborate to build something remarkable that reflects your unique brand and goals. I&#39;m committed to delivering high-quality results and look forward to partnering with you on your next project.
       </p>
+      </div>
     </div>
   )
 }

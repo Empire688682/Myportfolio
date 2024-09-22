@@ -56,4 +56,10 @@
         min-width: 300px;
         text-align: center;
     }
+    .conHead h1{
+        margin-bottom: 20px;
+        color: var(--black-color);
+        font-weight: 700;
+        font-size: 30px;
+    }
   }

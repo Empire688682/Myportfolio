@@ -32,7 +32,7 @@ const Service = () => {
         <div className={styles.headLinks}>
           <Link href='/' style={{color:"white", textDecoration:"none"}}>Home</Link>
           <><FaArrowRightLong style={{width:"50px", color:"white"}} /></>
-          <Link href='/service' style={{color:"white", textDecoration:"none"}}>service Me</Link>
+          <Link href='/service' style={{color:"white", textDecoration:"none"}}>Service Me</Link>
         </div>
       </div>
       <ServiceComp/>

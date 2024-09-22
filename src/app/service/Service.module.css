@@ -21,3 +21,12 @@
 .container .p{
     padding: 0 40px 5% 5% ;
 }
+
+@media (max-width:850px){
+  .portfolioConHead h1{
+    color: var(--black-color);
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: 600;
+  } 
+}

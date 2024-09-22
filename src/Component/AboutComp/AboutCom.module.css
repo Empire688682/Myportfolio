@@ -20,7 +20,7 @@
   .textCon h1{
     font-size: 40px;
     margin: 20px 0;
-;
+    color: var(--black-color);
   }
   .textCon p{
     margin-bottom: 30px;
@@ -62,5 +62,11 @@
       height: 400px;
       position: relative;
       margin: auto;
+    }
+    .textCon h1{
+      font-size: 40px;
+      margin: 20px 0;
+      color: var(--black-color);
+      font-size: 30px;
     }
   }
