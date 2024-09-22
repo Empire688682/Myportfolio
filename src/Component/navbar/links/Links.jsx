@@ -25,10 +25,6 @@ const Links = ({setShowMenu,showMenu}) => {
         path:"/blog"
     },
     {
-        title:"Pages",
-        path:"/pages"
-    },
-    {
         title:"Contact",
         path:"/contact"
     },

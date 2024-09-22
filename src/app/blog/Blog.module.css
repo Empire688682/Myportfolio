@@ -135,7 +135,14 @@
     background-color: black;
     color: white;
 }
+.nextBackNumber h3{
+    color: var(--black-color);
+}
 @media (max-width:850px){
+    .blogBanner h1{
+        color: white;
+        font-size: 30px;
+    }
     .threeColum{
         flex-basis: 100%;
     }

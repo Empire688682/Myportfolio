@@ -1,5 +1,5 @@
 import styles from './ServiceComp.module.css';
-import { FaShoppingCart, FaTabletAlt, FaTools, FaUserTie, FaSearch } from "react-icons/fa";
+import {FaLaptopCode, FaShoppingCart, FaTabletAlt, FaTools, FaUserTie, FaSearch } from "react-icons/fa";
 
 const ServiceComp = () => {
   return (
@@ -13,7 +13,7 @@ const ServiceComp = () => {
       <div className={styles.serviceBox}>
           <div className={styles.servicesCon}>
             <h2 className={styles.H2AsHead}> 
-              <FaShoppingCart className={styles.icons} /> 
+              <FaLaptopCode className={styles.icons} /> 
               Custom Web Development
               </h2>
             <p>I craft tailored solutions that meet your unique needs. Every website I build is a reflection of your brand, ensuring it stands out in the digital landscape.</p>

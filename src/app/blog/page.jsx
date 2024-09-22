@@ -59,11 +59,14 @@ const Blog = () => {
             <div className={styles.nextBackContainer}>
             <IoIosArrowBack className={styles.nextBackContainerIcon} />
             <div className={styles.nextBackNumber}>
-              <button>1</button>
-              <button>2</button>
-              <button>3</button>
-              <button>4</button>
-              <button>5</button>
+              {
+                //<button>1</button>
+                //<button>2</button>
+                //<button>3</button>
+                //<button>4</button>
+                //<button>5</button>
+              }
+              <h3>COMMING SOON</h3>
             </div>
             <MdNavigateNext className={styles.nextBackContainerIcon} />
             </div>
