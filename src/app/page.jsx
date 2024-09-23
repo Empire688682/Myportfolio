@@ -35,7 +35,9 @@ const HomePage = () => {
       </div>
       <div className={styles.exportCompCon}>
         <AboutComp/>
+        <div className={styles.serviceCompCon}>
         <ServiceComp/>
+        </div>
         <HomePageBanner/>
         <div className={styles.portfolio}>
           <div className={styles.content}>

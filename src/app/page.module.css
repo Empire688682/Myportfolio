@@ -29,6 +29,9 @@
 .exportCompCon {
   background-color: var(--navbar-color);
 }
+.serviceCompCon{
+  transform: translateY(-100px);
+}
 
 .textCon {
   flex-basis: 45%;
