@@ -1,5 +1,6 @@
 .container{
     padding: 50px 5%;
+    overflow: hidden;
 }
 .conHead{
     width: 100%;
@@ -26,7 +27,7 @@
     min-width: 300px;
     text-align: center;
     perspective: 1000px;
-    transform: rotateY(50deg) rotateX(100deg);
+    transform: rotateY(50deg) rotateX(50deg);
 }
 .observerCatch{
     flex-basis: 30%;
@@ -46,7 +47,7 @@
     max-width: 350px;
     transition: .4s ease-in-out;
 }
-.servicesCon h2{
+.servicesCon h2, .observerCatch h2{
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 10px;
@@ -62,7 +63,7 @@
     flex-direction: column;
     transition: color .3s ease-in-out;
 }
-.servicesCon:hover .H2AsHead, .observerCatch:hover .H2AsHead{
+.servicesCon:hover h2, .observerCatch:hover h2, .servicesCon:hover p, .observerCatch:hover p{
     color: #6cafe9;
 }
 .servicesCon:hover .img_Icon, .observerCatch:hover .img_Icon{

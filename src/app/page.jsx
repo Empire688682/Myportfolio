@@ -9,13 +9,15 @@ import { datas } from '@/Component/PortfolioData/PortfolioData';
 import { useState } from 'react';
 import Review from '@/Component/Review/Review';
 import Link from 'next/link';
+import { InView, useInView } from 'react-intersection-observer';
 
 const HomePage = () => {
   const [category, setCategory] = useState("All");
+  const {ref:cl1Ref, inView:cl1View} = useInView({triggerOnce:true});
 
   return (
     <div>
-      <div className={styles.homeContainer}>
+      <div ref={cl1Ref}className={cl1View? styles.observerCatch : styles.homeContainer}>
         <div className={styles.textCon}>
           <h3>THIS IS ME</h3>
           <h1>Juwon Asehinde</h1>
