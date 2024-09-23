@@ -6,25 +6,7 @@ import ServiceComp from '@/Component/ServiceComp/ServiceComp';
 import { useEffect } from 'react';
 
 const Service = () => {
-  useEffect(() => {
-    // Check if window is defined to ensure code runs only on client side
-    if (typeof window !== 'undefined') {
-      // Dynamically import ScrollReveal
-      import('scrollreveal').then((ScrollReveal) => {
-        const sr = ScrollReveal.default ? ScrollReveal.default() : ScrollReveal();
-        console.log(sr); // Debugging line to check ScrollReveal import
-        sr.reveal('img, h1, h2, h3, p, a, button, input', {
-          delay: 250,
-          distance: '50px',
-          duration: 1000,
-          easing: 'ease-in-out',
-          origin: 'bottom',
-        });
-      }).catch(err => {
-        console.error("Failed to load ScrollReveal", err);
-      });
-    }
-  }, []);
+
   return (
     <div className={styles.container}>
       <div className={styles.serviceHead}>

@@ -1,5 +1,4 @@
 "use client"
-import { useEffect } from 'react';
 import Image from 'next/image';
 import styles from './page.module.css';
 import AboutComp from '@/Component/AboutComp/AboutComp';
@@ -13,26 +12,6 @@ import Link from 'next/link';
 
 const HomePage = () => {
   const [category, setCategory] = useState("All");
-
-  useEffect(() => {
-    // Check if window is defined to ensure code runs only on client side
-    if (typeof window !== 'undefined') {
-      // Dynamically import ScrollReveal
-      import('scrollreveal').then((ScrollReveal) => {
-        const sr = ScrollReveal.default ? ScrollReveal.default() : ScrollReveal();
-        console.log(sr); // Debugging line to check ScrollReveal import
-        sr.reveal('img, h1, h2, h3, p, a, button, input', {
-          delay: 250,
-          distance: '50px',
-          duration: 1000,
-          easing: 'ease-in-out',
-          origin: 'bottom',
-        });
-      }).catch(err => {
-        console.error("Failed to load ScrollReveal", err);
-      });
-    }
-  }, []);
 
   return (
     <div>

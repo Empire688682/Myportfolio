@@ -72,7 +72,7 @@
 }
 .category:hover::before{
     width: 100%;
-} 
+}
 
 @media (max-width:850px){
   .portfolioConHead h1{

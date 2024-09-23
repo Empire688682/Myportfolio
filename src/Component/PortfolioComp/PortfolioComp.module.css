@@ -9,8 +9,20 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transform: translateY(50px);
 }
-.containerCart h3{
+.observerCatch{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(0);
+    transition: 1s ease-in-out;
+}
+.containerCart h3, .observerCatch h3{
+    color: var(--black-color);
+}
+.containerCart a, .observerCatch a{
     color: var(--black-color);
 }
 

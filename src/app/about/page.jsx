@@ -1,30 +1,10 @@
 "use client";
-import { useEffect } from 'react';
 import AboutComp from '@/Component/AboutComp/AboutComp';
 import styles from './About.module.css';
 import Link from 'next/link';
 import { FaArrowRightLong } from "react-icons/fa6";
 
 const About = () => {
-  useEffect(() => {
-    // Check if window is defined to ensure code runs only on client side
-    if (typeof window !== 'undefined') {
-      // Dynamically import ScrollReveal
-      import('scrollreveal').then((ScrollReveal) => {
-        const sr = ScrollReveal.default ? ScrollReveal.default() : ScrollReveal();
-        console.log(sr); // Debugging line to check ScrollReveal import
-        sr.reveal('Img, h1, h2, h3, p, a, button, input', {
-          delay: 250,
-          distance: '50px',
-          duration: 1000,
-          easing: 'ease-in-out',
-          origin: 'bottom',
-        });
-      }).catch(err => {
-        console.error("Failed to load ScrollReveal", err);
-      });
-    }
-  }, []);
 
   return (
     <div className={styles.container}>
