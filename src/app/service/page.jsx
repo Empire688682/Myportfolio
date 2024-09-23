@@ -3,7 +3,6 @@ import Link from 'next/link'
 import styles from './Service.module.css'
 import { FaArrowRightLong } from "react-icons/fa6";
 import ServiceComp from '@/Component/ServiceComp/ServiceComp';
-import { useEffect } from 'react';
 
 const Service = () => {
 

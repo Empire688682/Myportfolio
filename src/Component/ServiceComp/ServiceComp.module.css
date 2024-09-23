@@ -26,6 +26,15 @@
     min-width: 300px;
     text-align: center;
     perspective: 1000px;
+    transform: rotateY(50deg) rotateX(100deg);
+}
+.observerCatch{
+    flex-basis: 30%;
+    min-width: 300px;
+    text-align: center;
+    perspective: 1000px;
+    transform: translateY(0px);
+    transition: 1s ease-in-out;
 }
 .img_Icon{
     position: relative;
@@ -53,11 +62,11 @@
     flex-direction: column;
     transition: color .3s ease-in-out;
 }
-.servicesCon:hover .H2AsHead{
+.servicesCon:hover .H2AsHead, .observerCatch:hover .H2AsHead{
     color: #6cafe9;
 }
-.servicesCon:hover .img_Icon {
-    animation: handFan3D 0.7s ease-in-out backwards 2;
+.servicesCon:hover .img_Icon, .observerCatch:hover .img_Icon{
+    animation: handFan3D 0.7s ease-in-out backwards 1;
 }
 
 @keyframes handFan3D {

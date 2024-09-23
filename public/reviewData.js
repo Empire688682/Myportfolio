@@ -10,7 +10,7 @@ export const AllReview = [
         id: 2,
         name: "Samson Sam",
         body: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut aperiam ipsum odio ad et veritatis necessitatibus ratione, sint quis quae, eum aliquam provident illo possimus autem? Ducimus eaque molestias quaerat?",
-        imageSrc: "//review2.jpg",
+        imageSrc: "/review2.jpg",
     },
     {
         id: 3,
