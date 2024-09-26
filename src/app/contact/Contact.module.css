@@ -48,6 +48,13 @@
 .contactLeftCon h2{
     font-size: 18px;
     font-weight: 400;
+    color: var(--black-color);
+}
+.contactLeftCon h2 a{
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--black-color);
+    text-decoration: none;
 }
 .contactLeftCon .icons{
     font-size: 40px;

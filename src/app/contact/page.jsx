@@ -26,21 +26,21 @@ const Contact = () => {
             <div className={styles.contactLeftCon}>
             <GoHome  className={styles.icons} />
             <div>
-              <h2>Binghamton, New York</h2>
-              <p>4343 Hinkle Deegan Lake Road</p>
+              <h2>Ikorodu Lagos, Nigeria</h2>
+              <p>13 Koshebinu Street IbsheTitun</p>
             </div>
             </div>
             <div className={styles.contactLeftCon}>
             <BsTelephone className={styles.icons} />
             <div>
-              <h2>00 (958) 9865 562</h2>
-              <p>Mon to Fri 9am to 6 pm</p>
+              <h2><a href="tel:+234 9154 3581 35">+234 9154 3581 39</a></h2>
+              <p>Mon to Sat 8am to 10pm</p>
             </div>
             </div>
             <div className={styles.contactLeftCon}>
             <CiMail className={styles.icons} />
             <div>
-              <h2>support@colorlib.com</h2>
+              <h2><a href="mailto:asehindej@gmail.com">asehindej@gmail.com</a></h2>
               <p>Send us your query anytime!</p>
             </div>
             </div>
