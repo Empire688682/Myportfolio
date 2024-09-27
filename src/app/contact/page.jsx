@@ -35,9 +35,9 @@ const Contact = () => {
           message: '',
         });
         setMessage(response.data.message)
-        setInterval(()=>{
-          setMessage('')
-        },3000);
+        setTimeout(() => {
+          setMessage('');
+        }, 3000);
       }
     } catch (error) {
       console.log("ERROR:", error);
