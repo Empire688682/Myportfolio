@@ -7,6 +7,21 @@ import { BsTelephone } from "react-icons/bs";
 import { CiMail } from "react-icons/ci";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(formData);
+  };
 
   return (
     <div className={styles.container}>
@@ -46,11 +61,11 @@ const Contact = () => {
             </div>
           </div>
           <div className={styles.contactRight}>
-            <form action="">
+            <form onSubmit={handleSubmit}>
              <div className={styles.inputs}>
-                <input type="text" name="" id="name" placeholder='Enter your name' required/>
-                <input type="mail" name="" id="email" placeholder='Enter email address' required/>
-                <input type="text" name="" id="name" placeholder='Enter subject' required/>
+                <input type="text" name="name" onChange={handleChange} id="name" placeholder='Enter your name' required/>
+                <input type="mail" name="email" onChange={handleChange}  id="email" placeholder='Enter email address' required/>
+                <input type="text" name="message" onChange={handleChange}  id="message" placeholder='Enter subject' required/>
              </div>
               <div className={styles.textera}>
               <textarea name="text" id="text" cols="30" rows="7" placeholder='Enter message' required></textarea>
