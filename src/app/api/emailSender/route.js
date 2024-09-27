@@ -9,7 +9,7 @@ export async function POST(req) {
 
   // Add CORS headers
   const res = NextResponse.next();
-  res.headers.set('Access-Control-Allow-Origin', 'https://jayempire-3d.netlify.app/' || "http://localhost:5173/" || "https://jayempire.netlify.app/"); // Change '*' to your React app's origin for production
+  res.headers.set('Access-Control-Allow-Origin', 'https://jayempire-3d.netlify.app/' || "http://localhost:5173/" || "https://jayempire.netlify.app/" || "http://localhost:3000/"); // Change '*' to your React app's origin for production
   res.headers.set('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.headers.set('Access-Control-Allow-Headers', 'Content-Type');
 
