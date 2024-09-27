@@ -4,7 +4,6 @@ import { FaFacebookF } from "react-icons/fa6";
 import { BsGithub, BsInstagram } from "react-icons/bs";
 import { SlSocialTwitter } from "react-icons/sl";
 import { CiLinkedin } from "react-icons/ci";
-
 const Footer = () => {
   return (
     <div className={styles.container}>
