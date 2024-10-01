@@ -12,6 +12,7 @@ const AboutComp = () => {
         alt=''
         fill
         />
+        <div></div>
         </div>
         <div className={styles.textCon}>
         <h3>ABOUT ME</h3>
