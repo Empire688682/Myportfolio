@@ -7,12 +7,14 @@ const AboutComp = () => {
   return (
    <div className={styles.container}>
         <div className={styles.imageCon}>
-        <Image className='image'
+        <Image className={styles.image}
         src='/about.png'
         alt=''
         fill
         />
-        <div></div>
+        <div className={styles.animation}>
+          ggg
+        </div>
         </div>
         <div className={styles.textCon}>
         <h3>ABOUT ME</h3>

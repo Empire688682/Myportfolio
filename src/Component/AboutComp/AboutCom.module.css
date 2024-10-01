@@ -44,8 +44,16 @@
     width: 70%;
     height: 400px;
     position: relative;
+  }
+  .imageCon .image{
     border-radius: 9px 50pc 100px;
-    overflow: hidden;
+  }
+  .animation{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    background-color: blue;
+    transform: translateY(-50%);
   }
 
   @media (max-width:850px){
