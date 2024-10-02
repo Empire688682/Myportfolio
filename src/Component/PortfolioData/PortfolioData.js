@@ -34,7 +34,7 @@ export const datas = [
         imageSrc: "/ideajoter.png",
         work: "Latest",
         subCategory: "AllLatest",
-        link:"https://ideajotter.netlify.app/"
+        link:"https://frontend-qjpy.onrender.com/"
     },
     {
         id:5,

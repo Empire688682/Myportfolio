@@ -46,12 +46,13 @@
     position: relative;
   }
   .imageCon .image{
-    border-radius: 9px 50pc 100px;
+    border-radius: 9px 10pc 10px;
   }
   .animation{
     position: absolute;
-    left: 30px;
-    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
     display: flex;
     gap: 20px;
     font-size: 50px;
@@ -59,6 +60,9 @@
   .animation .icon{
     color: var(--black-color);
     animation: rotation 10s infinite linear;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    cursor: pointer;
   }
 
   @keyframes rotation {
