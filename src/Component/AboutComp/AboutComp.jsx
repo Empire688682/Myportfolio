@@ -2,6 +2,8 @@ import Image from 'next/image'
 import React from 'react'
 import styles from './AboutCom.module.css';
 import Link from 'next/link';
+import { SiReactos } from "react-icons/si";
+import { FaProjectDiagram } from "react-icons/fa";
 
 const AboutComp = () => {
   return (
@@ -13,7 +15,8 @@ const AboutComp = () => {
         fill
         />
         <div className={styles.animation}>
-          ggg
+          <SiReactos className={styles.icon}/>
+          <FaProjectDiagram className={styles.icon}/>
         </div>
         </div>
         <div className={styles.textCon}>

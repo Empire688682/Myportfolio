@@ -50,10 +50,34 @@
   }
   .animation{
     position: absolute;
-    left: 0;
-    top: 50%;
-    background-color: blue;
-    transform: translateY(-50%);
+    left: 30px;
+    bottom: 0;
+    display: flex;
+    gap: 20px;
+    font-size: 50px;
+  }
+  .animation .icon{
+    color: var(--black-color);
+    animation: rotation 10s infinite linear;
+  }
+
+  @keyframes rotation {
+    0%{
+      transform: rotateX(0deg);
+    }
+    25%{
+      transform: rotateY(180deg);
+    }
+    50%{
+      transform: rotateY(180deg);
+    }
+
+    75%{
+      transform: rotateX(180deg);
+    }
+    100%{
+      transform: rotateX(360deg);
+    }
   }
 
   @media (max-width:850px){
