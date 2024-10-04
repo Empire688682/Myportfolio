@@ -7,7 +7,7 @@ export const datas = [
         imageSrc: "/divas.png",
         work: "Latest",
         subCategory: "AllLatest",
-        link:"https://home-of-divas.vercel.app/"
+        link:"https://home-of-divas.vercel.app/",
     },
     {
         id:2,
@@ -16,7 +16,7 @@ export const datas = [
         imageSrc: "/homefittings.png",
         work: "Latest",
         subCategory: "AllLatest",
-        link:"https://homefittings.ng/"
+        link:"https://homefittings.ng/",
     },
     {
         id:3,
