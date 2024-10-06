@@ -58,7 +58,7 @@
     font-size: 50px;
   }
   .animation .icon{
-    color: var(--black-color);
+    color: white;
     animation: rotation 10s infinite linear;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     padding: 5px;
