@@ -15,7 +15,7 @@ const Contact = () => {
     subject: '',
     message: '',
   });
-  const [message, setMessage]= useState("");
+  const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
 
   const handleChange = (event) => {
@@ -40,10 +40,11 @@ const Contact = () => {
         }, 3000);
       }
     } catch (error) {
-      console.log("ERROR:", error);
-      window.alert("An error occured")
+      console.log("ERROR:", error.response ? error.response.data : error.message);
+      window.alert("An error occurred");
     }
-    finally{
+
+    finally {
       setLoading(false);
     }
   }
@@ -99,9 +100,9 @@ const Contact = () => {
             <div className={styles.textera}>
               <textarea name="message" id="message" value={formData.message} onChange={handleChange} cols="30" rows="7" placeholder='Enter message' required></textarea>
               {
-                message? <p>{message}</p>:null
+                message ? <p>{message}</p> : null
               }
-              <button type="submit">{loading ? "Sending..." : "Send" }</button>
+              <button type="submit">{loading ? "Sending..." : "Send"}</button>
             </div>
           </form>
         </div>
