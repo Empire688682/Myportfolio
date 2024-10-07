@@ -5,6 +5,8 @@ import validator from 'validator';
 import dotenv from 'dotenv';
 dotenv.config();
 
+console.log(process.env.EMAIL_USER);
+
 export async function POST(req) {
   const body = await req.json(); // Parse the incoming request body
 
