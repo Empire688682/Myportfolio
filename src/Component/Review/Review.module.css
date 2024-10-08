@@ -26,7 +26,6 @@
   box-shadow: 0 4px 15px var(--menu-color);
   border-radius: 12px;
   background-color: var(--white-color);
-  overflow: hidden;
   position: relative;
 }
 
@@ -74,8 +73,8 @@
   background-color: white;
   border-radius: 50%;
   padding: 5px;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -88,11 +87,11 @@
 }
 
 .review_cart :global(.swiper-button-next) {
-  right: 10px;
+  right: 1px;
 }
 
 .review_cart :global(.swiper-button-prev) {
-  left: 10px;
+  left: 1px;
 }
 
 .review_cart :global(.swiper-button-next:hover),
