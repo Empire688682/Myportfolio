@@ -12,12 +12,8 @@ import { CiLinkedin } from "react-icons/ci";
 const AboutComp = () => {
   return (
    <div className={styles.container}>
-        <div className={styles.imageCon}>
-        <Image className={styles.image}
-        src='/favicon.ico'
-        alt=''
-        fill
-        />
+        <div className={styles.imageB4}>
+        <h1>@ JAYEMPIRE</h1>
         <div className={styles.animation}>
           <SiReactos className={styles.icon}/>
           <FaProjectDiagram className={styles.icon}/>
