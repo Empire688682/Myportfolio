@@ -56,7 +56,7 @@ const AboutComp = () => {
           <div>
             <h2>Future plans</h2>
             <h4>Senior Web Developer</h4>
-            <p>plans of becoming a senior web developer working for both organisations and individuals</p>
+            <p>Plans of becoming a senior web developer working for both organisations and individuals</p>
           </div>
         </div>
         </div>

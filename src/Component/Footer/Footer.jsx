@@ -3,7 +3,7 @@ import styles from './Footer.module.css'
 import { FaFacebookF } from "react-icons/fa6";
 import { BsGithub, BsInstagram } from "react-icons/bs";
 import { SlSocialTwitter } from "react-icons/sl";
-import { CiLinkedin } from "react-icons/ci";
+import { CiLinkedin, CiTextAlignCenter } from "react-icons/ci";
 const Footer = () => {
   return (
     <div className={styles.container}>
@@ -31,6 +31,7 @@ const Footer = () => {
             <Link href='www.linkedin.com/in/asehinde-juwon-73b04b268' className={styles.iconLink}><CiLinkedin style={{width:"25px" ,height:"25px"}} /></Link>
         </div>
       </div>
+      <p className={styles.copyright}>© 2023 JayEmpire. All rights reserved.</p>
     </div>
   )
 }
