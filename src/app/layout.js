@@ -37,8 +37,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Head>
         <title>JayEmpire</title>
-        <meta name="description" content="This is JayEmpire ersonal Portfolio" />
-        <meta name="author" content="Your JayEmpire" />
+        <meta name="description" content="This is JayEmpire personal Portfolio" />
+        <meta name="author" content="JayEmpire" />
         <meta name="format-detection"content="telephone=no, date=no, email=no, address=no"/>
         <meta property="og:title" content="JayEmpire" />
         <meta property="og:description" content="This is a description of my Next.js app" />

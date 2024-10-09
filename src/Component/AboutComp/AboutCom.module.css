@@ -2,14 +2,16 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 50px 5%;
+    padding-top: 50px;
+    padding-left: 5%;
+    padding-right: 5%;
     width: 100%;
     margin-bottom: 30px;
+    gap: 20px;
   }
   .textCon{
     flex-basis: 45%;
     min-width: 350px;
-    margin-top: 50px;
   }
   .textCon h4{
     font-weight: 400;
@@ -63,9 +65,12 @@
     width: 70%;
     height: 400px;
     position: relative;
+    background-image: url("/about.png");
+    background-position: center;
+    background-size: cover;
   }
   .imageCon .image{
-    border-radius: 9px 10pc 10px;
+    border-radius: 9px;
   }
   .animation{
     position: absolute;
@@ -82,6 +87,33 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     padding: 5px;
     cursor: pointer;
+  }
+  .socialMedia{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -120px;
+    gap: 20px;
+    font-size: 50px;
+    text-align: center;
+  }
+  .socialMedia h4{
+    font-size: 25px;
+    color: var(--heading-color);
+  }
+  .socialMedia .links{
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .iconLink{
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   @keyframes rotation {
@@ -124,7 +156,7 @@
       font-size: 30px;
     }
   }
-  @media (max-width:691px){
+  @media (max-width:850px){
     .more_details{
       display: flex;
       gap: 20px;
@@ -134,5 +166,11 @@
       flex-wrap: wrap;
       text-align: center;
       justify-content: center;
+    }
+    .more_details div{
+      min-width: 100%;
+    }
+    .socialMedia{
+      display: none;
     }
   }

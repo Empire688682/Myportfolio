@@ -13,6 +13,11 @@
     color: var(--black-color);
     font-weight: 700;
 }
+.conHead .header_p{
+    max-width: 500px;
+    text-align: center;
+    margin: 0 auto;
+}
 .serviceBox{
     display: flex;
     flex-wrap: wrap;
@@ -27,7 +32,7 @@
     min-width: 300px;
     text-align: center;
     perspective: 1000px;
-    transform: rotateY(50deg) rotateX(50deg);
+    transform: rotateY(30deg) rotateX(30deg);
 }
 .observerCatch{
     flex-basis: 30%;
@@ -36,6 +41,9 @@
     perspective: 1000px;
     transform: translateY(0px);
     transition: 1s ease-in-out;
+    border: 1px solid rgb(223, 215, 215);
+    padding: 20px;
+    border-radius: 9px;
 }
 .img_Icon{
     position: relative;
