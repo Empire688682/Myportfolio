@@ -1,6 +1,5 @@
 .container{
     display: flex;
-    align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 50px 5%;
@@ -12,6 +11,14 @@
     min-width: 350px;
     margin-top: 50px;
   }
+  .textCon h4{
+    font-weight: 400;
+    color: var(--heading-color);
+  }
+  .textCon h2{
+    font-weight: 400;
+    color: var(--heading-color);
+  }
   .textCon h3{
     font-weight: 400;
     color: var(--heading-color);
@@ -22,8 +29,20 @@
     color: var(--black-color);
   }
   .textCon p{
-    margin-bottom: 30px;
     line-height: 1.8;
+  }
+  .more_details{
+    display: flex;
+    gap: 20px;
+    font-size: 15px;
+    margin: 20px 0;
+    color: var(--heading-color);
+    flex-wrap: wrap;
+    text-align: start;
+  }
+  .more_details div{
+    min-width: 250px;
+    max-width: 250px;
   }
   .textCon .linkBtn{
     background-color: var(--heading-color);
@@ -103,5 +122,17 @@
       margin: 20px 0;
       color: var(--black-color);
       font-size: 30px;
+    }
+  }
+  @media (max-width:691px){
+    .more_details{
+      display: flex;
+      gap: 20px;
+      font-size: 15px;
+      margin: 20px 0;
+      color: var(--heading-color);
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: center;
     }
   }
