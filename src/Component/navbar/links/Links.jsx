@@ -21,6 +21,10 @@ const Links = ({setShowMenu,showMenu}) => {
         path:"/portfolio"
     },
     {
+        title:"My 3D Portfolio",
+        path:"https://jayempire-3d.vercel.app/"
+    },
+    {
         title:"Blog",
         path:"/blog"
     },
