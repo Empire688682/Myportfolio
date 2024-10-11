@@ -13,7 +13,6 @@ const AboutComp = () => {
   return (
    <div className={styles.container}>
         <div className={styles.imageB4}>
-        <h1>@ JAYEMPIRE</h1>
         <div className={styles.animation}>
           <SiReactos className={styles.icon}/>
           <FaProjectDiagram className={styles.icon}/>

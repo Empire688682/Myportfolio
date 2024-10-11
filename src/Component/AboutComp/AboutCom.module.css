@@ -65,7 +65,7 @@
     width: 70%;
     height: 400px;
     position: relative;
-    background: linear-gradient(rgba(15, 14, 14, 0.719), rgba(0, 0, 0, 0.979)), url("/about.png");
+    background: url("/about.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -73,18 +73,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.imageB4 h1 {
-  color: snow;
-  animation: moveSquare 10s 1 linear;
-}
-
-@keyframes moveSquare {
-  0% { transform: translate(0, 0); }
-  25% { transform: translate(-200px, -200px); }  
-  50% { transform: translate(200px, 200px); }
-  75% { transform: translate(-200px, 200px); }
-  100% { transform: translate(200px, -200px); } 
 }
   .animation{
     position: absolute;
