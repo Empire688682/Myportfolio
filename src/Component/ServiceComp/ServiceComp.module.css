@@ -4,7 +4,6 @@
 }
 .conHead{
     width: 100%;
-    text-align: center;
     margin-bottom: 70px;
     margin-top: 50px;
 }
@@ -15,8 +14,6 @@
 }
 .conHead .header_p{
     max-width: 500px;
-    text-align: center;
-    margin: 0 auto;
 }
 .serviceBox{
     display: flex;
@@ -100,11 +97,26 @@
     }
 }
 
-@media (max-width:850px){
+@media (max-width:711px){
     .servicesCon{
         flex-basis: 100%;
+        width:100% ;
         min-width: 300px;
+        max-width: 500px;
+        text-align: start;
+    }
+    .observerCatch{
+        flex-basis: 100%;
+        width:100% ;
+        min-width: 300px;
+        max-width: 500px;
         text-align: center;
+        perspective: 1000px;
+        transform: translateY(0px);
+        transition: 1s ease-in-out;
+        border: 1px solid rgb(223, 215, 215);
+        padding: 20px;
+        border-radius: 9px;
     }
     .conHead h1{
         margin-bottom: 20px;
