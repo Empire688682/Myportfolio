@@ -6,24 +6,12 @@
     padding-left: 5%;
     padding-right: 5%;
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 100px;
     gap: 20px;
   }
   .textCon{
     flex-basis: 45%;
     min-width: 350px;
-  }
-  .textCon h4{
-    font-weight: 400;
-    color: var(--heading-color);
-  }
-  .textCon h2{
-    color: var(--heading-color);
-    font-size: 20px;
-  }
-  .textCon h3{
-    font-weight: 400;
-    color: var(--heading-color);
   }
   .textCon h1{
     font-size: 40px;
@@ -35,31 +23,26 @@
   }
   .more_details{
     display: flex;
+    flex-direction: column;
     gap: 20px;
-    font-size: 15px;
-    margin: 20px 0;
-    color: var(--heading-color);
-    flex-wrap: wrap;
     text-align: start;
+    margin-top: 40px;
   }
-  .more_details div{
-    min-width: 250px;
-    max-width: 250px;
+  .more_details_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
-  .textCon .linkBtn{
-    background-color: var(--heading-color);
-    border: none;
-    padding: 20px 40px;
-    color: var(--white);
-    font-weight: bold;
-    transition: .5s ease-out;
+  .more_details_header h2{
+    font-size: 15px;
+  }
+  .more_icon{
+    font-size: 25px;
     cursor: pointer;
-    margin: 15px 0;
-    text-decoration: none;
+    font-weight: bolder;
+    filter: drop-shadow(0 0 1px black);
   }
-  .textCon .linkBtn:hover{
-    box-shadow: 0 0 10px var(--heading-color);
-  }
+
   .imageB4 {
     flex-basis: 45%;
     width: 70%;
@@ -83,31 +66,40 @@
     gap: 20px;
     font-size: 50px;
   }
-  .animation .icon{
+  .animation .iconLink{
     color: white;
     animation: rotation 10s infinite linear;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     padding: 5px;
     cursor: pointer;
   }
-  .socialMedia{
+  .hireMe_Con{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
     bottom: -120px;
     gap: 20px;
-    font-size: 50px;
     text-align: center;
   }
-  .socialMedia h4{
-    font-size: 25px;
-    color: var(--heading-color);
+  .hireMe_Con h4{
+    margin-bottom: 15px;
   }
-  .socialMedia .links{
-    font-size: 25px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  .hireMe_Con .btn {
+    background-color: var(--link-color);
+    border: none;
+    padding: 15px 50px;
+    color: white;
+    font-weight: bold;
+    transition: .5s ease-out;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .hireMe_Con .btn:hover {
+    box-shadow: 0 0 10px var(--link-color);
   }
   .iconLink{
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -160,20 +152,7 @@
     }
   }
   @media (max-width:850px){
-    .more_details{
-      display: flex;
-      gap: 20px;
-      font-size: 15px;
-      margin: 20px 0;
-      color: var(--heading-color);
-      flex-wrap: wrap;
-      text-align: center;
-      justify-content: center;
-    }
-    .more_details div{
-      min-width: 100%;
-    }
-    .socialMedia{
+    .hireMe_Con{
       display: none;
     }
   }
