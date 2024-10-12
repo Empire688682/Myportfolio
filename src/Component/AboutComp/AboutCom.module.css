@@ -88,6 +88,7 @@
   }
   .hireMe_Con h4{
     margin-bottom: 15px;
+    color: var(--black-color);
   }
   .hireMe_Con .btn {
     background-color: var(--link-color);
