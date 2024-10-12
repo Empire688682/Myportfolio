@@ -17,8 +17,8 @@ const AboutComp = () => {
     <div className={styles.container}>
       <div className={styles.imageB4}>
         <div className={styles.animation}>
-          <Link href='www.linkedin.com/in/asehinde-juwon-73b04b268' className={styles.iconLink}><CiLinkedin style={{ width: "25px", height: "25px" }} /></Link>
-          <Link href='https://github.com/Empire688682' className={styles.iconLink}><BsGithub style={{ width: "25px", height: "25px" }} /></Link>
+          <Link href='www.linkedin.com/in/asehinde-juwon-73b04b268'><CiLinkedin className={styles.animination_iconLink} /></Link>
+          <Link href='https://github.com/Empire688682'><BsGithub className={styles.animination_iconLink} /></Link>
         </div>
         <div className={styles.hireMe_Con}>
           <h4>Let make it possible</h4>
