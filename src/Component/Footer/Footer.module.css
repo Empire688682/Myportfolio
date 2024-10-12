@@ -62,7 +62,7 @@
     height: 50px;
 }
 .copyright{
-    text-align: center;
+    text-align: start;
     width: 100%;
 }
 
@@ -74,8 +74,8 @@
     .socialMedia{
         flex-basis: 100%;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        align-items: start;
+        justify-content: start;
         flex-direction: column;
     }
     .newsletter{
