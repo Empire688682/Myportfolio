@@ -30,7 +30,7 @@ const AboutComp = () => {
       <div className={styles.textCon}>
         <h3>ABOUT ME</h3>
         <h1>PERSONAL DETAILS</h1>
-        <p>I&#39;m a Fullstack Web and Software Developer skilled in JavaScript, PHP, Node.js, and database management, with expertise in React, Next.js, and Three.js. I continuously advance my career by learning and growing. I work closely with clients to deliver efficient, scalable solutions that solve real-world problems. Let&#39;s bring your ideas to life.</p>
+        <p>I&#39;m a Full Stack Web and Software Developer skilled in JavaScript, PHP, Node.js, and database management, with expertise in React, Next.js, and Three.js. I continuously advance my career by learning and growing. I work closely with clients to deliver efficient, scalable solutions that solve real-world problems. Let&#39;s bring your ideas to life.</p>
         <div className={styles.more_details}>
           <h2>More Details</h2>
           {
