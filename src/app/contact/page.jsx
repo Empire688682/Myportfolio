@@ -79,7 +79,7 @@ const Contact = () => {
           <div className={styles.contactLeftCon}>
             <BsTelephone className={styles.icons} />
             <div>
-              <h2><a href="tel:+234 9154 3581 35">+234 9154 3581 39</a></h2>
+              <h2><a href="tel:+2349154358139">+234 9154 3581 39</a></h2>
               <p>Mon to Sat 8am to 10pm</p>
             </div>
           </div>
