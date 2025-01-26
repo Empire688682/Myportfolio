@@ -8,7 +8,7 @@ const PortfolioCart = ({data, category}) => {
     <div className={styles.container}>
      <div ref={cl1Ref} className={`${cl1View? styles.observerCatch:styles.containerCart}`}>
       <div className={styles.imageCon}>
-        <Image src={data.imageSrc} alt='' fill/>
+        <Image src={data.imageSrc} className={styles.image} alt='' fill/>
         </div>
         <h3>{data.title}</h3>
         <p>{data.category}</p>
