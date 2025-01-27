@@ -1,6 +1,8 @@
 import { dataModel } from "../../models/dataModel";
 import { connectDb } from "../../utils/dbConnection";
 import { NextResponse } from "next/server";
+import path from "path";
+import fs from "fs";
 
 const addData = async (req) => {
     if (req.method === "POST") {
