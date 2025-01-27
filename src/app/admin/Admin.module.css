@@ -3,6 +3,10 @@
     width: 100%;
     padding: 0 5% 50px 5%;
 }
+.container h1{
+    color: var(--black-color);
+    padding-bottom: 20px;
+}
 .addDataContainer{
     width: 100%;
 }
@@ -10,6 +14,11 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+.addDataContainer form label{
+    border-radius: 9px;
+    overflow: hidden;
+    position: relative;
 }
 .addDataContainer form input{
     max-width: 300px;
