@@ -12,7 +12,8 @@
   color: var(--menu-color);
 }
 
-.review h3, .review p {
+.review h3,
+.review p {
   color: var(--menu-color);
 }
 
@@ -40,9 +41,9 @@
 }
 
 .img_Con_Con {
-  display: flex; 
+  display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 
 .img_Con {

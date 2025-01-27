@@ -1,161 +1,161 @@
-.container{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding-top: 50px;
-    padding-left: 5%;
-    padding-right: 5%;
-    width: 100%;
-    margin-bottom: 100px;
-    gap: 20px;
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 100%;
+  margin-bottom: 100px;
+  gap: 20px;
+}
+.textCon {
+  flex-basis: 45%;
+  min-width: 350px;
+}
+.textCon h1 {
+  font-size: 40px;
+  margin: 20px 0;
+  color: var(--black-color);
+}
+.textCon p {
+  line-height: 1.8;
+}
+.more_details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: start;
+  margin-top: 40px;
+  color: var(--black-color);
+}
+.more_details_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.more_details_header h2 {
+  font-size: 15px;
+}
+.more_icon {
+  font-size: 25px;
+  cursor: pointer;
+  font-weight: bolder;
+  filter: drop-shadow(0 0 1px black);
+}
+
+.imageB4 {
+  flex-basis: 45%;
+  width: 70%;
+  height: 400px;
+  position: relative;
+  background: url("/about.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.animation {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 12px;
+  display: flex;
+  gap: 20px;
+  font-size: 50px;
+}
+.animination_iconLink {
+  color: white;
+  animation: rotation 10s infinite linear;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  padding: 3px;
+  border-radius: 3px;
+  font-size: 50px;
+}
+.hireMe_Con {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: absolute;
+  left: 0;
+  bottom: -120px;
+  gap: 20px;
+  text-align: center;
+}
+.hireMe_Con h4 {
+  margin-bottom: 15px;
+  color: var(--black-color);
+}
+.hireMe_Con .btn {
+  background-color: var(--link-color);
+  border: none;
+  padding: 15px 50px;
+  color: white;
+  font-weight: bold;
+  transition: 0.5s ease-out;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.hireMe_Con .btn:hover {
+  box-shadow: 0 0 10px var(--link-color);
+}
+.iconLink {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--black-color);
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotateX(0deg);
   }
-  .textCon{
-    flex-basis: 45%;
-    min-width: 350px;
+  25% {
+    transform: rotateY(180deg);
   }
-  .textCon h1{
-    font-size: 40px;
-    margin: 20px 0;
-    color: var(--black-color);
-  }
-  .textCon p{
-    line-height: 1.8;
-  }
-  .more_details{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    text-align: start;
-    margin-top: 40px;
-    color: var(--black-color);
-  }
-  .more_details_header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .more_details_header h2{
-    font-size: 15px;
-  }
-  .more_icon{
-    font-size: 25px;
-    cursor: pointer;
-    font-weight: bolder;
-    filter: drop-shadow(0 0 1px black);
+  50% {
+    transform: rotateY(180deg);
   }
 
+  75% {
+    transform: rotateX(180deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+
+@media (max-width: 850px) {
+  .textCon {
+    flex-basis: 100%;
+    min-width: 300px;
+    margin-bottom: 50px;
+  }
   .imageB4 {
-    flex-basis: 45%;
+    flex-basis: 100%;
     width: 70%;
     height: 400px;
     position: relative;
-    background: url("/about.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 9px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: auto;
+  }
+  .textCon h1 {
+    font-size: 40px;
+    margin: 20px 0;
+    color: var(--black-color);
+    font-size: 30px;
+  }
 }
-  .animation{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 12px;
-    display: flex;
-    gap: 20px;
-    font-size: 50px;
+@media (max-width: 850px) {
+  .hireMe_Con {
+    display: none;
   }
-  .animination_iconLink{
-    color: white;
-    animation: rotation 10s infinite linear;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    padding: 3px;
-    border-radius: 3px;
-    font-size: 50px;
-  }
-  .hireMe_Con{
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    position: absolute;
-    left: 0;
-    bottom: -120px;
-    gap: 20px;
-    text-align: center;
-  }
-  .hireMe_Con h4{
-    margin-bottom: 15px;
-    color: var(--black-color);
-  }
-  .hireMe_Con .btn {
-    background-color: var(--link-color);
-    border: none;
-    padding: 15px 50px;
-    color: white;
-    font-weight: bold;
-    transition: .5s ease-out;
-    cursor: pointer;
-    text-decoration: none;
-    border-radius: 5px;
-  }
-  
-  .hireMe_Con .btn:hover {
-    box-shadow: 0 0 10px var(--link-color);
-  }
-  .iconLink{
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--black-color);
-  }
-
-  @keyframes rotation {
-    0%{
-      transform: rotateX(0deg);
-    }
-    25%{
-      transform: rotateY(180deg);
-    }
-    50%{
-      transform: rotateY(180deg);
-    }
-
-    75%{
-      transform: rotateX(180deg);
-    }
-    100%{
-      transform: rotateX(360deg);
-    }
-  }
-
-  @media (max-width:850px){
-    .textCon{
-      flex-basis: 100%;
-      min-width: 300px;
-      margin-bottom: 50px;
-    }
-    .imageB4{
-      flex-basis: 100%;
-      width: 70%;
-      height: 400px;
-      position: relative;
-      margin: auto;
-    }
-    .textCon h1{
-      font-size: 40px;
-      margin: 20px 0;
-      color: var(--black-color);
-      font-size: 30px;
-    }
-  }
-  @media (max-width:850px){
-    .hireMe_Con{
-      display: none;
-    }
-  }
+}

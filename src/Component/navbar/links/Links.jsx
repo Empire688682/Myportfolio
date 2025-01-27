@@ -1,56 +1,54 @@
-"use client"
-import styles from './Links.module.css'
-import NavbarLink from '../NavbarLink/NavbarLink'
+"use client";
+import styles from "./Links.module.css";
+import NavbarLink from "../NavbarLink/NavbarLink";
 
-const Links = ({setShowMenu,showMenu}) => {
+const Links = ({ setShowMenu, showMenu }) => {
   const AllLink = [
     {
-        title:"Home",
-        path:"/"
+      title: "Home",
+      path: "/",
     },
     {
-        title:"About",
-        path:"/about"
+      title: "About",
+      path: "/about",
     },
     {
-        title:"Service",
-        path:"/service"
+      title: "Service",
+      path: "/service",
     },
     {
-        title:"Portfolio",
-        path:"/portfolio"
+      title: "Portfolio",
+      path: "/portfolio",
     },
     {
-        title:"My 3D Portfolio",
-        path:"https://jayempire-3d.vercel.app/"
+      title: "My 3D Portfolio",
+      path: "https://jayempire-3d.vercel.app/",
     },
     {
-        title:"Blog",
-        path:"/blog"
+      title: "Blog",
+      path: "/blog",
     },
     {
-        title:"Contact",
-        path:"/contact"
+      title: "Contact",
+      path: "/contact",
     },
-];
+  ];
   return (
     <div className={styles.container}>
       <div className={styles.menu}>
-      {
-        AllLink.map((link,i) =>{
-         return <NavbarLink key={i} link={link}/>
-        })
-      }
+        {AllLink.map((link, i) => {
+          return <NavbarLink key={i} link={link} />;
+        })}
       </div>
-      <div className={`${styles.mobileMenu} ${showMenu && styles.mobileMenuShow}`}>
-      {
-        AllLink.map((link,i) =>{
-         return <NavbarLink setShowMenu={setShowMenu} key={i} link={link}/>
-        })
-      }
+      <div
+        className={`${styles.mobileMenu} ${showMenu && styles.mobileMenuShow}`}
+      >
+        {AllLink.map((link, i) => {
+          return <NavbarLink setShowMenu={setShowMenu} key={i} link={link} />;
+        })}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Links
+export default Links;

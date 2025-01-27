@@ -1,7 +1,7 @@
-.container{
-    width: 100%;
-    margin-top: 70px;
+.container {
+  width: 100%;
+  margin-top: 70px;
 }
-.container h2{
-    color: var(--text-color);
+.container h2 {
+  color: var(--text-color);
 }

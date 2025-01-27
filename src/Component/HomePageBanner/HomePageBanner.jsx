@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
-import styles from './HomePageBanner.module.css';
+import React, { useEffect, useRef, useState } from "react";
+import styles from "./HomePageBanner.module.css";
 
 const HomePageBanner = () => {
   const columnsRef = useRef([]);
@@ -49,7 +49,8 @@ const HomePageBanner = () => {
   return (
     <div className={styles.container}>
       <div className={styles.colum}>
-        <h1 ref={(el) => (columnsRef.current[0] = el)}>0</h1> {/* Start from 0 */}
+        <h1 ref={(el) => (columnsRef.current[0] = el)}>0</h1>{" "}
+        {/* Start from 0 */}
         <p>Projects Completed</p>
       </div>
       <div className={styles.colum}>

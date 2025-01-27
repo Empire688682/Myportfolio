@@ -1,37 +1,38 @@
-.imageCon{
-    min-width: 300px;
-    position: relative;
-    height: 300px;
-    margin:20px ;
+.imageCon {
+  min-width: 300px;
+  position: relative;
+  height: 300px;
+  margin: 20px;
 }
-.image{
-    min-width: 300px;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 12px;
+.image {
+  min-width: 300px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
 }
-.containerCart{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transform: translateY(50px);
+.containerCart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(50px);
 }
-.observerCatch{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transform: translateY(0);
-    transition: 1s ease-in-out;
-    border: 1px solid rgb(223, 215, 215);
-    border-radius: 9px;
+.observerCatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(0);
+  transition: 1s ease-in-out;
+  border: 1px solid rgb(223, 215, 215);
+  border-radius: 9px;
 }
-.containerCart h3, .observerCatch h3{
-    color: var(--black-color);
+.containerCart h3,
+.observerCatch h3 {
+  color: var(--black-color);
 }
-.containerCart a, .observerCatch a{
-    color: blue;
+.containerCart a,
+.observerCatch a {
+  color: blue;
 }
-

@@ -1,10 +1,10 @@
-import styles from './LeftColumPostCart.module.css';
+import styles from "./LeftColumPostCart.module.css";
 import { FaRegUser } from "react-icons/fa";
 import { IoMdEye } from "react-icons/io";
 import { MdOutlineDateRange } from "react-icons/md";
 import { BiMessageRounded } from "react-icons/bi";
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 
 const LeftColumPostCart = ({ post }) => {
   return (
@@ -31,11 +31,13 @@ const LeftColumPostCart = ({ post }) => {
       </div>
       <div className={styles.bigColumColum}>
         <div className={styles.bigColumColumImgCon}>
-          <Image src={post.imageSrc} alt='' fill />
+          <Image src={post.imageSrc} alt="" fill />
         </div>
         <h2>{post.title}</h2>
         <p>{post.body}</p>
-        <Link href={`/blog/${post.id}`}><button>View More</button></Link>
+        <Link href={`/blog/${post.id}`}>
+          <button>View More</button>
+        </Link>
       </div>
     </div>
   );
