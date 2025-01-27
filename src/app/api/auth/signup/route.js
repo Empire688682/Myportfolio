@@ -19,6 +19,9 @@ const createAdmin = async (req) => {
             if(!validator.isEmail(email)){
                 return NextResponse.json({ success: false, message: "invalid email" }, { status: 400 });
             }
+            if(password.length < 8){
+                return NextResponse.json({ success: false, message: "password too short" }, { status: 400 });
+            }
             const hashPassword = await bcrypt.hash(password, 10);
             const newAdmin = new adminModel({
                 email,
@@ -41,3 +44,7 @@ const createAdmin = async (req) => {
         }
     }
 }
+
+export async function POST(req) {
+    return createAdmin(req);
+};

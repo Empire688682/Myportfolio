@@ -8,6 +8,7 @@ import axios from 'axios';
 const Page = () => {
     const [showPassword, setShowPasswor] = useState(false);
     const [loading, setLoading] = useState(false);
+    const [errorMsg, setErrorMsg] = useState(null);
 
     const [data, setData] = useState({
         email: "",
@@ -23,13 +24,20 @@ const Page = () => {
         try {
             setLoading(true);
             const response = await axios.post("api/auth/signup", data);
-            if (response.success) {
+            if (response.data.success) {
                 setData({
                     email: "",
                     password: ""
                 })
             }
+            else{
+                setErrorMsg(response.data.message)
+            }
         } catch (error) {
+            setErrorMsg("An error occured");
+            setInterval(()=>{
+                setErrorMsg("");
+            }, 3000);
             console.log("Error:", error);
         }
         finally {
@@ -39,12 +47,13 @@ const Page = () => {
 
     const handleSubmission = (e) => {
         e.preventDefault();
+        registerUser();
     }
 
     return (
         <div className={style.private}>
             <h1>Welcome to your private room</h1>
-            <form>
+            <form onSubmit={handleSubmission}>
                 <input className={style.emailInput} onChange={handleOnchange} type="email" value={data.email} name="email" placeholder='Email' required />
                 <div className={style.pwdCon}>
                     <input className={style.pwdConInput} onChange={handleOnchange} value={data.password} type={`${showPassword ? "text" : "password"}`} name="password" placeholder='Password' required />
@@ -53,7 +62,12 @@ const Page = () => {
                     }
                     </p>
                 </div>
-                <input className={style.submitInput} type="submit" value="FIRE" />
+                {
+                    errorMsg && (
+                        <span>{errorMsg}</span>
+                    )
+                }
+                <input className={style.submitInput} type="submit" value={loading? "Loading......":"FIRE"} />
             </form>
         </div>
     )
