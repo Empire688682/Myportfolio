@@ -1,0 +1,25 @@
+.container{
+    margin-top: 90px;
+    width: 100%;
+    padding: 0 5% 50px 5%;
+}
+.addDataContainer{
+    width: 100%;
+}
+.addDataContainer form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.addDataContainer form input{
+    max-width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+}
+.addDataContainer form button{
+    max-width: 150px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
