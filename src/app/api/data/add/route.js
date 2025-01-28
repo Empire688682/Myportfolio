@@ -27,10 +27,6 @@ const addData = async (req) => {
                 return NextResponse.json({ success: false, message: "Image size too large" }, { status: 400 })
             }
 
-            if (image.size < 1024 * 1024 * 1) {
-                return NextResponse.json({ success: false, message: "Image size too small" }, { status: 400 })
-            }
-
             const safeImage = image.name.replace(/[^a-zA-Z0-9.-_]/g, "");
 
             const imageName = `${Date.now()}_${safeImage}`;
@@ -44,13 +40,13 @@ const addData = async (req) => {
             await fs.writeFile(imageDir, buffer);
 
             const newData = new dataModel({
-                image: `images/${safeImage}`,
+                image: `/images/${imageName}`,
                 title,
                 category,
                 link
             });
             await newData.save();
-            return NextResponse.json({ success: true, data: newData, message: "" }, { status: 200 });
+            return NextResponse.json({ success: true, data: newData, message: "Data added successfully" }, { status: 200 });
         } catch (error) {
             console.log("Error:", error);
             return NextResponse.json({ success: false, message: "Unable to add data" }, { status: 500 })
