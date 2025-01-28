@@ -24,16 +24,19 @@ const Page = () => {
     try {
       setLoading(true);
       const response = await axios.post("api/auth/signup", data);
-      if (response.data.success) {
         setData({
           email: "",
           password: "",
         });
+        alert(response.data.message);
+      } catch (error) {
+      if (error.response) {
+        // Backend returned an error response (status 4xx or 5xx)
+        alert(error.response.data.message || "An error occurred");
       } else {
-        setErrorMsg(response.data.message);
+        // Network error or other unexpected errors
+        setErrorMsg("An unexpected error occurred");
       }
-    } catch (error) {
-      setErrorMsg("An error occured");
       setInterval(() => {
         setErrorMsg("");
       }, 3000);
