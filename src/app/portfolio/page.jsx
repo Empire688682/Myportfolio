@@ -3,14 +3,13 @@ import styles from "./Portfolio.module.css";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Link from "next/link";
 import PortfolioCart from "@/Component/PortfolioComp/Portfolio";
-import { datas } from "@/Component/PortfolioData/PortfolioData.js";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import LoadingSpinner from "@/Component/LoadingSpinner/LoadingSpinner";
 
 
 const Portfolio = () => {
-  const [data, setData] = useState([]);
+  const [datas, setDatas] = useState([]);
   const [category, setCategory] = useState("All");
   const [loading, setLoading] = useState(false);
 
@@ -18,18 +17,16 @@ const Portfolio = () => {
     try {
       setLoading(true);
       const response = await axios.get("api/data/get");
-      if(response.success){
-        setData(response.data.data);
+      if (response.data.success) {
+        setDatas(response.data.data);
       }
     } catch (error) {
       console.error("Error fetching data:", error);
     }
-    finally{
+    finally {
       setLoading(false);
     }
   };
-
-  console.log("data:", data)
 
   useEffect(() => {
     getData();
@@ -125,9 +122,20 @@ const Portfolio = () => {
             <LoadingSpinner />
           ) : (
             <div className={styles.portfolioCart}>
-              {datas.map((data) => (
-                <PortfolioCart key={data.id} data={data} category={category} />
-              ))}
+              {datas.map((data) => {
+                if (category === "All" || category === data.category) {
+                  return (
+                    <div key={data.id}>
+                      <PortfolioCart
+                        setCategory={setCategory}
+                        category={category}
+                        data={data}
+                      />
+                    </div>
+                  );
+                }
+                // No return null here
+              })}
             </div>
           )
         }

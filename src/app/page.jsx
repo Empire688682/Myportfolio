@@ -5,15 +5,37 @@ import AboutComp from "@/Component/AboutComp/AboutComp";
 import ServiceComp from "@/Component/ServiceComp/ServiceComp";
 import HomePageBanner from "@/Component/HomePageBanner/HomePageBanner";
 import PortfolioCart from "@/Component/PortfolioComp/Portfolio";
-import { datas } from "@/Component/PortfolioData/PortfolioData";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Review from "@/Component/Review/Review";
 import Link from "next/link";
 import { InView, useInView } from "react-intersection-observer";
+import axios from "axios";
+import LoadingSpinner from "@/Component/LoadingSpinner/LoadingSpinner";
 
 const HomePage = () => {
   const [category, setCategory] = useState("All");
   const { ref: cl1Ref, inView: cl1View } = useInView({ triggerOnce: true });
+  const [datas, setDatas] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  const getData = async () => {
+    try {
+      setLoading(true);
+      const response = await axios.get("api/data/get");
+      if (response.data.success) {
+        setDatas(response.data.data);
+      }
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+    finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
 
   return (
     <div>
@@ -117,23 +139,28 @@ const HomePage = () => {
                 Personal Website
               </p>
             </div>
-            <div className={styles.portfolioCart}>
-              {datas.map((data) => {
-                if (data.subCategory === "AllLatest") {
-                  if (category === data.category || category === "All") {
-                    return (
-                      <PortfolioCart
-                        setCategory={setCategory}
-                        category={category}
-                        key={data.id}
-                        data={data}
-                      />
-                    );
-                  }
-                }
-                return null;
-              })}
-            </div>
+            {
+              loading ? (
+                <LoadingSpinner />
+              ) : (
+                <div className={styles.portfolioCart}>
+                  {datas.map((data) => {
+                    if (category === "All" || category === data.category) {
+                      return (
+                        <div key={data._id}>
+                          <PortfolioCart
+                            setCategory={setCategory}
+                            category={category}
+                            data={data}
+                          />
+                        </div>
+                      );
+                    }
+                    // No return null here
+                  })}
+                </div>
+              )
+            }
           </div>
         </div>
         <Review />
