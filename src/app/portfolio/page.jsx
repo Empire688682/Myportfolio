@@ -4,10 +4,36 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import Link from "next/link";
 import PortfolioCart from "@/Component/PortfolioComp/Portfolio";
 import { datas } from "@/Component/PortfolioData/PortfolioData.js";
-import { useRef, useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import LoadingSpinner from "@/Component/LoadingSpinner/LoadingSpinner";
+
 
 const Portfolio = () => {
+  const [data, setData] = useState([]);
   const [category, setCategory] = useState("All");
+  const [loading, setLoading] = useState(false);
+
+  const getData = async () => {
+    try {
+      setLoading(true);
+      const response = await axios.get("api/data/get");
+      if(response.success){
+        setData(response.data.data);
+      }
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+    finally{
+      setLoading(false);
+    }
+  };
+
+  console.log("data:", data)
+
+  useEffect(() => {
+    getData();
+  }, []);
   return (
     <div className={styles.container}>
       <div className={styles.portfolioHead}>
@@ -94,22 +120,17 @@ const Portfolio = () => {
             Personal Website
           </p>
         </div>
-        <div className={styles.portfolioCart}>
-          {datas.map((data) => {
-            if (category === "All" || category === data.category) {
-              return (
-                <div>
-                  <PortfolioCart
-                    setCategory={setCategory}
-                    category={category}
-                    data={data}
-                  />
-                </div>
-              );
-            }
-            return null;
-          })}
-        </div>
+        {
+          loading ? (
+            <LoadingSpinner />
+          ) : (
+            <div className={styles.portfolioCart}>
+              {datas.map((data) => (
+                <PortfolioCart key={data.id} data={data} category={category} />
+              ))}
+            </div>
+          )
+        }
       </div>
     </div>
   );
