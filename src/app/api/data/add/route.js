@@ -44,7 +44,7 @@ const addData = async (req) => {
             await fs.writeFile(imageDir, buffer);
 
             const newData = new dataModel({
-                image: `images/${imageName}`,
+                image: `images/${safeImage}`,
                 title,
                 category,
                 link
