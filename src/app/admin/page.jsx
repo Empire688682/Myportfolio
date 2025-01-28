@@ -37,10 +37,16 @@ const Page = () => {
         });
         setImage(null);
         setSuccess("Data added successfully!");
+        setInterval(()=>{
+          setSuccess(null);
+        },2000);
       }
     } catch (error) {
       console.error("An error occurred:", error);
       setSuccess("Failed to add data. Please try again.");
+      setInterval(()=>{
+        setSuccess(null);
+      },2000);
     } finally {
       setLoading(false);
     }
@@ -48,6 +54,10 @@ const Page = () => {
 
   const handleFormSubmission = (e) => {
     e.preventDefault();
+    if(!image || !data.title || !data.category || !data.link){
+      setSuccess("All feild required");
+      return;
+    }
     addDataToDb();
   };
 
@@ -86,6 +96,7 @@ const Page = () => {
             required
           />
           <select name="category" onChange={handleOnChange} value={data.category}>
+            <option value="" disabled>Choose Category</option>
             <option value="Portfolio">Portfolio</option>
             <option value="e-Commerce">e-Commerce</option>
             <option value="Blog">Blog</option>
