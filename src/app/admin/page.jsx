@@ -19,6 +19,8 @@ const Page = () => {
     setData((prev) => ({ ...prev, [name]: value }));
   };
 
+  console.log(data);
+
   const addDataToDb = async () => {
     const formData = new FormData();
     formData.append("image", image);
@@ -70,22 +72,6 @@ const Page = () => {
             />
           </label>
           <input
-            type="text"
-            name="title"
-            value={data.title}
-            onChange={handleOnChange}
-            placeholder="Title"
-            required
-          />
-          <input
-            type="text"
-            name="category"
-            value={data.category}
-            onChange={handleOnChange}
-            placeholder="Category"
-            required
-          />
-          <input
             type="file"
             onChange={(e) => setImage(e.target.files[0])}
             alt=""
@@ -93,6 +79,21 @@ const Page = () => {
             placeholder="Image"
             hidden
           />
+          <input
+            type="text"
+            name="title"
+            value={data.title}
+            onChange={handleOnChange}
+            placeholder="Title"
+            required
+          />
+          <select name="category" onChange={handleOnChange} value={data.category}>
+            <option value="Portfolio">Portfolio</option>
+            <option value="e-Commerce">e-Commerce</option>
+            <option value="Blog">Blog</option>
+            <option value="Landing Page">Landing Page</option>
+            <option value="Personal Website">Personal Website</option>
+          </select>
           <input
             type="text"
             name="link"

@@ -20,7 +20,7 @@
     overflow: hidden;
     position: relative;
 }
-.addDataContainer form input{
+.addDataContainer form input, .addDataContainer form select{
     max-width: 300px;
     padding: 10px;
     font-size: 16px;
