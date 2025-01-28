@@ -67,7 +67,7 @@ const Page = () => {
       <h1>Admin Panel</h1>
       <ul className={style.adminMenus}>
         <li
-          className={menu === "add" ? style.active : ""}
+          className={menu === "add" ? style.active :""}
           onClick={() => setMenu("add")}
         >
           Add
