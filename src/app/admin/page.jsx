@@ -19,8 +19,6 @@ const Page = () => {
     setData((prev) => ({ ...prev, [name]: value }));
   };
 
-  console.log(data);
-
   const addDataToDb = async () => {
     const formData = new FormData();
     formData.append("image", image);
