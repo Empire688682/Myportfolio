@@ -1,60 +1,61 @@
-.container{
-    margin-top: 90px;
-    width: 100%;
-    padding: 0 5% 50px 5%;
+.container {
+  margin-top: 90px;
+  width: 100%;
+  padding: 0 5% 50px 5%;
 }
-.adminMenus{
-    display: flex;
-    gap: 10px;
-    margin-bottom: 30px;
+.adminMenus {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
 }
-.adminMenus li{
-    list-style: none;
-    font-weight: bolder;
-    color: var(--black-color);
-    padding: 10px;
-    cursor: pointer;
-    background-color: var(--link-color);
-    width: 80px;
-    text-align: center;
-    border-radius: 10px;
+.adminMenus li {
+  list-style: none;
+  font-weight: bolder;
+  color: var(--black-color);
+  padding: 10px;
+  cursor: pointer;
+  background-color: var(--link-color);
+  width: 80px;
+  text-align: center;
+  border-radius: 10px;
 }
-.adminMenus li:hover{
-    background-color: #62bdfc;
+.adminMenus li:hover {
+  background-color: #62bdfc;
 }
-.adminMenus li.active{
-    background-color: #62bdfc;
+.adminMenus li.active {
+  background-color: #62bdfc;
 }
-.container h1{
-    color: var(--black-color);
-    padding-bottom: 20px;
+.container h1 {
+  color: var(--black-color);
+  padding-bottom: 20px;
 }
-.container h2{
-    color: var(--black-color);
-    margin-bottom: 10px;
+.container h2 {
+  color: var(--black-color);
+  margin-bottom: 10px;
 }
-.addDataContainer{
-    width: 100%;
+.addDataContainer {
+  width: 100%;
 }
-.addDataContainer form{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.addDataContainer form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-.addDataContainer form label{
-    border-radius: 9px;
-    overflow: hidden;
-    position: relative;
+.addDataContainer form label {
+  border-radius: 9px;
+  overflow: hidden;
+  position: relative;
 }
-.addDataContainer form input, .addDataContainer form select{
-    max-width: 300px;
-    padding: 10px;
-    font-size: 16px;
-    outline: none;
+.addDataContainer form input,
+.addDataContainer form select {
+  max-width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  outline: none;
 }
-.addDataContainer form button{
-    max-width: 150px;
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
+.addDataContainer form button {
+  max-width: 150px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
 }

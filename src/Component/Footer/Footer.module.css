@@ -64,26 +64,26 @@
   height: 50px;
 }
 .copyright {
-  text-align:flex-start;
+  text-align: flex-start;
   width: 100%;
 }
 
 @media (max-width: 850px) {
   .aboutMe {
     flex-basis: 100%;
-    text-align:flex-start;
+    text-align: flex-start;
   }
   .socialMedia {
     flex-basis: 100%;
     display: flex;
-    align-items:flex-start;
+    align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
   }
   .newsletter {
     flex-basis: 100%;
     display: flex;
-    align-items:flex-start;
+    align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
   }

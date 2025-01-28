@@ -7,7 +7,6 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import LoadingSpinner from "@/Component/LoadingSpinner/LoadingSpinner";
 
-
 const Portfolio = () => {
   const [datas, setDatas] = useState([]);
   const [category, setCategory] = useState("All");
@@ -22,8 +21,7 @@ const Portfolio = () => {
       }
     } catch (error) {
       console.error("Error fetching data:", error);
-    }
-    finally {
+    } finally {
       setLoading(false);
     }
   };
@@ -117,28 +115,26 @@ const Portfolio = () => {
             Personal Website
           </p>
         </div>
-        {
-          loading ? (
-            <LoadingSpinner />
-          ) : (
-            <div className={styles.portfolioCart}>
-              {datas.map((data) => {
-                if (category === "All" || category === data.category) {
-                  return (
-                    <div key={data.id}>
-                      <PortfolioCart
-                        setCategory={setCategory}
-                        category={category}
-                        data={data}
-                      />
-                    </div>
-                  );
-                }
-                // No return null here
-              })}
-            </div>
-          )
-        }
+        {loading ? (
+          <LoadingSpinner />
+        ) : (
+          <div className={styles.portfolioCart}>
+            {datas.map((data) => {
+              if (category === "All" || category === data.category) {
+                return (
+                  <div key={data.id}>
+                    <PortfolioCart
+                      setCategory={setCategory}
+                      category={category}
+                      data={data}
+                    />
+                  </div>
+                );
+              }
+              // No return null here
+            })}
+          </div>
+        )}
       </div>
     </div>
   );

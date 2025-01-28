@@ -66,80 +66,92 @@ const Page = () => {
     <div className={style.container}>
       <h1>Admin Panel</h1>
       <ul className={style.adminMenus}>
-        <li className={menu === "add" ? style.active : ""} onClick={() => setMenu("add")}>Add</li>
-        <li className={menu === "list" ? style.active : ""} onClick={() => setMenu("list")}>List</li>
+        <li
+          className={menu === "add" ? style.active : ""}
+          onClick={() => setMenu("add")}
+        >
+          Add
+        </li>
+        <li
+          className={menu === "list" ? style.active : ""}
+          onClick={() => setMenu("list")}
+        >
+          List
+        </li>
       </ul>
-      {
-        menu === "add" && (
-          <div>
-            <h2>Add data</h2>
-            <div className={style.addDataContainer}>
-              <form onSubmit={handleFormSubmission}>
-                <label htmlFor="image">
-                  <Image
-                    src={
-                      image
-                        ? window.URL.createObjectURL(image)
-                        : "/image_placeholder.webp"
-                    }
-                    alt=""
-                    width={300}
-                    height={200}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
-                </label>
-                <input
-                  type="file"
-                  onChange={(e) => setImage(e.target.files[0])}
+      {menu === "add" && (
+        <div>
+          <h2>Add data</h2>
+          <div className={style.addDataContainer}>
+            <form onSubmit={handleFormSubmission}>
+              <label htmlFor="image">
+                <Image
+                  src={
+                    image
+                      ? window.URL.createObjectURL(image)
+                      : "/image_placeholder.webp"
+                  }
                   alt=""
-                  id="image"
-                  placeholder="Image"
-                  hidden
+                  width={300}
+                  height={200}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
-                <input
-                  type="text"
-                  name="title"
-                  value={data.title}
-                  onChange={handleOnChange}
-                  placeholder="Title"
-                  required
-                />
-                <select name="category" onChange={handleOnChange} value={data.category}>
-                  <option value="" disabled>Choose Category</option>
-                  <option value="Portfolio">Portfolio</option>
-                  <option value="e-Commerce">e-Commerce</option>
-                  <option value="Blog">Blog</option>
-                  <option value="Landing Page">Landing Page</option>
-                  <option value="Personal Website">Personal Website</option>
-                </select>
-                <input
-                  type="text"
-                  name="link"
-                  value={data.link}
-                  onChange={handleOnChange}
-                  placeholder="Link"
-                  required
-                />
-                <button type="submit" disabled={loading}>
-                  {loading ? "Adding..." : "Add Data"}
-                </button>
-              </form>
-              {success && <p>{success}</p>}
-            </div>
+              </label>
+              <input
+                type="file"
+                onChange={(e) => setImage(e.target.files[0])}
+                alt=""
+                id="image"
+                placeholder="Image"
+                hidden
+              />
+              <input
+                type="text"
+                name="title"
+                value={data.title}
+                onChange={handleOnChange}
+                placeholder="Title"
+                required
+              />
+              <select
+                name="category"
+                onChange={handleOnChange}
+                value={data.category}
+              >
+                <option value="" disabled>
+                  Choose Category
+                </option>
+                <option value="Portfolio">Portfolio</option>
+                <option value="e-Commerce">e-Commerce</option>
+                <option value="Blog">Blog</option>
+                <option value="Landing Page">Landing Page</option>
+                <option value="Personal Website">Personal Website</option>
+              </select>
+              <input
+                type="text"
+                name="link"
+                value={data.link}
+                onChange={handleOnChange}
+                placeholder="Link"
+                required
+              />
+              <button type="submit" disabled={loading}>
+                {loading ? "Adding..." : "Add Data"}
+              </button>
+            </form>
+            {success && <p>{success}</p>}
           </div>
-        )
-      }
+        </div>
+      )}
 
-      {
-        menu === "list" && (
-          <div>
-            <h2>Data list</h2>
-            <div className={style.addDataContainer}>
-              <p>Comming Soon</p>
-            </div>
+      {menu === "list" && (
+        <div>
+          <h2>Data list</h2>
+          <div className={style.addDataContainer}>
+            <p>Comming Soon</p>
           </div>
-        )
-      }
+        </div>
+      )}
     </div>
   );
 };

@@ -27,8 +27,7 @@ const HomePage = () => {
       }
     } catch (error) {
       console.error("Error fetching data:", error);
-    }
-    finally {
+    } finally {
       setLoading(false);
     }
   };
@@ -139,28 +138,26 @@ const HomePage = () => {
                 Personal Website
               </p>
             </div>
-            {
-              loading ? (
-                <LoadingSpinner />
-              ) : (
-                <div className={styles.portfolioCart}>
-                  {datas.map((data) => {
-                    if (category === "All" || category === data.category) {
-                      return (
-                        <div key={data._id}>
-                          <PortfolioCart
-                            setCategory={setCategory}
-                            category={category}
-                            data={data}
-                          />
-                        </div>
-                      );
-                    }
-                    // No return null here
-                  })}
-                </div>
-              )
-            }
+            {loading ? (
+              <LoadingSpinner />
+            ) : (
+              <div className={styles.portfolioCart}>
+                {datas.map((data) => {
+                  if (category === "All" || category === data.category) {
+                    return (
+                      <div key={data._id}>
+                        <PortfolioCart
+                          setCategory={setCategory}
+                          category={category}
+                          data={data}
+                        />
+                      </div>
+                    );
+                  }
+                  // No return null here
+                })}
+              </div>
+            )}
           </div>
         </div>
         <Review />

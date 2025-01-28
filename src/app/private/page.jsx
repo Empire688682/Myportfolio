@@ -24,12 +24,12 @@ const Page = () => {
     try {
       setLoading(true);
       const response = await axios.post("api/auth/signup", data);
-        setData({
-          email: "",
-          password: "",
-        });
-        alert(response.data.message);
-      } catch (error) {
+      setData({
+        email: "",
+        password: "",
+      });
+      alert(response.data.message);
+    } catch (error) {
       if (error.response) {
         // Backend returned an error response (status 4xx or 5xx)
         alert(error.response.data.message || "An error occurred");
