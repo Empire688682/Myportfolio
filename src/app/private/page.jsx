@@ -12,6 +12,7 @@ const Page = () => {
   const [giveAccess, setGiveAccess] = useState(false);
 
   const [data, setData] = useState({
+    name: "",
     email: "",
     password: "",
   });
@@ -31,6 +32,7 @@ const Page = () => {
       const baseURL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
       const response = await axios.post(`${baseURL}/api/auth/signin`, data);
       setData({
+        name:"",
         email: "",
         password: "",
       });
@@ -85,6 +87,15 @@ const Page = () => {
     <div className={style.private}>
       <h1>Welcome to your private room</h1>
       <form onSubmit={handleSubmission}>
+        <input
+          className={style.emailInput}
+          onChange={handleOnchange}
+          type="text"
+          value={data.name}
+          name="name"
+          placeholder="Name"
+          required
+        />
         <input
           className={style.emailInput}
           onChange={handleOnchange}
