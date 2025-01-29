@@ -7,10 +7,11 @@ import jwt from "jsonwebtoken";
 
 const createAdmin = async (req) => {
   if (req.method === "POST") {
-   await connectDb();
+    await connectDb();
     try {
       const reqBody = await req.json();
-      const {name, email, password } = reqBody;
+      console.log("Request body:", reqBody); // Log request body to debug
+      const { name, email, password } = reqBody;
       const userExist = await adminModel.findOne({ email });
 
       if (userExist) {
@@ -25,7 +26,7 @@ const createAdmin = async (req) => {
           { status: 400 },
         );
       }
-      if(!name || !email || !password){
+      if (!name || !email || !password) {
         return NextResponse.json(
           { success: false, message: "All field required" },
           { status: 400 },
@@ -46,10 +47,13 @@ const createAdmin = async (req) => {
       await newAdmin.save();
 
       const token = jwt.sign({ id: newAdmin._id }, process.env.JWT_SECRET_KEY);
-      const res = NextResponse.json(
-        { success: true, data: newAdmin, message: "Admin added" },
-        { status: 200 },
-      );
+      const res = NextResponse.json({
+        success: true,
+        data: newAdmin,
+        message: "Admin added"
+      }, {
+        status: 200
+      });
       res.cookies.set("AdminToken", token, {
         secure: process.env.NODE_ENV === "production",
         maxAge: 2 * 24 * 60 * 60,

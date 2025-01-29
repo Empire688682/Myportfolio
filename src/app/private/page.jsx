@@ -6,7 +6,7 @@ import { BiShow } from "react-icons/bi";
 import axios from "axios";
 
 const Page = () => {
-  const [showPassword, setShowPasswor] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState(null);
   const [giveAccess, setGiveAccess] = useState(false);
@@ -18,7 +18,7 @@ const Page = () => {
   });
 
   const [accessCode, setAccessCode] = useState({
-    code:"",
+    code: "",
   });
 
   const handleOnchange = (e) => {
@@ -30,9 +30,13 @@ const Page = () => {
     try {
       setLoading(true);
       const baseURL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
-      const response = await axios.post(`${baseURL}/api/auth/signin`, data);
+      const response = await axios.post(`${baseURL}/api/auth/signin`, data, {
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      });
       setData({
-        name:"",
+        name: "",
         email: "",
         password: "",
       });
@@ -65,15 +69,15 @@ const Page = () => {
   };
 
   const handleGiveAccess = () => {
-    if(Number(accessCode.code ) === Number(process.env.NEXT_PUBLIC_ADMIN_PASS_KEY)){
+    if (Number(accessCode.code) === Number(process.env.NEXT_PUBLIC_ADMIN_PASS_KEY)) {
       setGiveAccess(true);
     }
-    else{
+    else {
       alert("Wrong Access Code");
     }
   };
 
-  if(!giveAccess){
+  if (!giveAccess) {
     return (
       <div className={style.giveAccess}>
         <h2>Enter Your Access Code</h2>
@@ -115,7 +119,7 @@ const Page = () => {
             placeholder="Password"
             required
           />
-          <p onClick={() => setShowPasswor(!showPassword)}>
+          <p onClick={() => setShowPassword(!showPassword)}>
             {showPassword ? <BiSolidHide /> : <BiShow />}
           </p>
         </div>
