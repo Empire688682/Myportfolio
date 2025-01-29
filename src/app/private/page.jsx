@@ -9,10 +9,15 @@ const Page = () => {
   const [showPassword, setShowPasswor] = useState(false);
   const [loading, setLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState(null);
+  const [giveAccess, setGiveAccess] = useState(false);
 
   const [data, setData] = useState({
     email: "",
     password: "",
+  });
+
+  const [accessCode, setAccessCode] = useState({
+    code:"",
   });
 
   const handleOnchange = (e) => {
@@ -24,7 +29,7 @@ const Page = () => {
     try {
       setLoading(true);
       const baseURL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
-      const response = await axios.post(`${baseURL}/api/auth/signup`, data);
+      const response = await axios.post(`${baseURL}/api/auth/signin`, data);
       setData({
         email: "",
         password: "",
@@ -51,6 +56,30 @@ const Page = () => {
     e.preventDefault();
     registerUser();
   };
+
+  const handleAccessCodeOnchange = (e) => {
+    const { name, value } = e.target;
+    setAccessCode((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleGiveAccess = () => {
+    if(Number(accessCode.code ) === Number(process.env.NEXT_PUBLIC_ADMIN_PASS_KEY)){
+      setGiveAccess(true);
+    }
+    else{
+      alert("Wrong Access Code");
+    }
+  };
+
+  if(!giveAccess){
+    return (
+      <div className={style.giveAccess}>
+        <h2>Enter Your Access Code</h2>
+        <input type="text" onChange={handleAccessCodeOnchange} value={accessCode.code} name="code" placeholder="Access Code" />
+        <button onClick={handleGiveAccess}>Submit</button>
+      </div>
+    );
+  }
 
   return (
     <div className={style.private}>

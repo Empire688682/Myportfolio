@@ -10,7 +10,7 @@ const createAdmin = async (req) => {
    await connectDb();
     try {
       const reqBody = await req.json();
-      const { email, password } = reqBody;
+      const {name, email, password } = reqBody;
       const userExist = await adminModel.findOne({ email });
 
       if (userExist) {
@@ -25,6 +25,12 @@ const createAdmin = async (req) => {
           { status: 400 },
         );
       }
+      if(!name || !email || !password){
+        return NextResponse.json(
+          { success: false, message: "All field required" },
+          { status: 400 },
+        );
+      }
       if (password.length < 8) {
         return NextResponse.json(
           { success: false, message: "password too short" },
@@ -33,6 +39,7 @@ const createAdmin = async (req) => {
       }
       const hashPassword = await bcrypt.hash(password, 10);
       const newAdmin = new adminModel({
+        name,
         email,
         password: hashPassword,
       });

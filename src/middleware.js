@@ -6,7 +6,7 @@ export function middleware(req) {
   const isPrivate = path === "/private";
   const isAdmin = path === "/admin";
 
-  if (!token && (isPrivate || isAdmin)) {
+  if (!token && (isAdmin)) {
     return NextResponse.redirect(new URL("/", req.url), { status: 307 });
   }
 }

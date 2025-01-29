@@ -1,3 +1,48 @@
+.giveAccess{
+  width: 100%;
+  margin-top: 70px;
+  padding: 50px 5%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 15px;
+}
+.giveAccess input{
+  padding: 10px;
+  outline: none;
+  font-size: 16px;
+  width: 300px;
+  margin: 0 auto;
+  cursor: pointer;
+  background-color: var(--black-color);
+  border: none;
+  color: var(--white);
+  font-weight: bolder;
+}
+.giveAccess input:hover{
+  background-color: #62bdfc;
+}
+.giveAccess input:active{
+  box-shadow: 0 0 10px 10px rgba(158, 158, 158, 0.3);
+}
+.giveAccess button{
+  padding: 10px;
+  outline: none;
+  font-size: 16px;
+  width: 100px;
+  margin: 0 auto;
+  cursor: pointer;
+  background-color: var(--black-color);
+  border: none;
+  color: var(--white);
+  font-weight: bolder;
+}
+.giveAccess button:hover{
+  background-color: #62bdfc;
+}
+.giveAccess button:active{
+  box-shadow: 0 0 10px 10px rgba(158, 158, 158, 0.3);
+}
 .private {
   width: 100%;
   margin-top: 70px;
@@ -6,7 +51,7 @@
   flex-direction: column;
   text-align: center;
 }
-.private h1 {
+.private h1, .giveAccess h2{
   color: var(--black-color);
 }
 .private form {
