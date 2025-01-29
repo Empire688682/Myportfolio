@@ -23,7 +23,8 @@ const Page = () => {
   const registerUser = async () => {
     try {
       setLoading(true);
-      const response = await axios.post("api/auth/signup", data);
+      const baseURL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const response = await axios.post(`${baseURL}/api/auth/signup`, data);
       setData({
         email: "",
         password: "",
