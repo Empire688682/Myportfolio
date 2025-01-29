@@ -15,11 +15,7 @@ const Portfolio = () => {
   const getData = async () => {
     try {
       setLoading(true);
-      const baseURL =
-        process.env.NODE_ENV === "production"
-          ? "https://jayempire.vercel.app/api/data/get"
-          : "/api/data/get";
-      const response = await axios.get(baseURL);
+      const response = await axios.get("/api/data/get");
       if (response.data.success) {
         setDatas(response.data.data);
       }
