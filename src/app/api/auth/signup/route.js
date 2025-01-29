@@ -7,7 +7,7 @@ import jwt from "jsonwebtoken";
 
 const createAdmin = async (req) => {
   if (req.method === "POST") {
-    connectDb();
+   await connectDb();
     try {
       const reqBody = await req.json();
       const { email, password } = reqBody;
