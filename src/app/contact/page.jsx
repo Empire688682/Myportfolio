@@ -158,7 +158,7 @@ const Contact = () => {
                 required
               ></textarea>
               {message ? <p>{message}</p> : null}
-              <button type="submit">{loading ? "Sending..." : "Send"}</button>
+              <button disabled={loading} type="submit">{loading ? "Sending..." : "Send"}</button>
             </div>
           </form>
         </div>
