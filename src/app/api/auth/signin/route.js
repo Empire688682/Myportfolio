@@ -10,7 +10,6 @@ const createAdmin = async (req) => {
     await connectDb();
     try {
       const reqBody = await req.json();
-      console.log("Request body:", reqBody); // Log request body to debug
       const { name, email, password } = reqBody;
       const userExist = await adminModel.findOne({ email });
 
