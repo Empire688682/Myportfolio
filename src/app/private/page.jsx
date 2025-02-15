@@ -6,6 +6,8 @@ import { BiShow } from "react-icons/bi";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useGlobalContext } from "@/Component/Context";
+import dotenv from "dotenv";
+dotenv.config();
 
 const Page = () => {
   const { logoutAdmin } = useGlobalContext();
@@ -89,7 +91,7 @@ const Page = () => {
     if (Number(accessCode) === Number(process.env.ADMIN_PASS_KEY)) {
       setGiveAccess(true);
     } else {
-      alert("Wrong Access Code");
+      alert(`Invalid Access Code :${Number(process.env.ADMIN_PASS_KEY)}, ${accessCode}`);
     }
   };
 
