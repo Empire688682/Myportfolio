@@ -1,4 +1,4 @@
-.giveAccess{
+.giveAccess {
   width: 100%;
   margin-top: 70px;
   padding: 50px 5%;
@@ -7,7 +7,7 @@
   text-align: center;
   gap: 15px;
 }
-.giveAccess input{
+.giveAccess input {
   padding: 10px;
   outline: none;
   font-size: 16px;
@@ -18,13 +18,13 @@
   color: var(--white);
   font-weight: bolder;
 }
-.giveAccess input:hover{
+.giveAccess input:hover {
   background-color: #62bdfc;
 }
-.giveAccess input:active{
+.giveAccess input:active {
   box-shadow: 0 0 10px 10px rgba(158, 158, 158, 0.3);
 }
-.giveAccess button{
+.giveAccess button {
   padding: 10px;
   outline: none;
   font-size: 16px;
@@ -36,10 +36,10 @@
   color: var(--white);
   font-weight: bolder;
 }
-.giveAccess button:hover{
+.giveAccess button:hover {
   background-color: #62bdfc;
 }
-.giveAccess button:active{
+.giveAccess button:active {
   box-shadow: 0 0 10px 10px rgba(158, 158, 158, 0.3);
 }
 .private {
@@ -50,7 +50,7 @@
   flex-direction: column;
   text-align: center;
 }
-.privateLinks{
+.privateLinks {
   display: flex;
   gap: 30px;
   margin-bottom: 20px;
@@ -58,18 +58,19 @@
   justify-content: center;
   width: 100%;
 }
-.privateLinks li{
+.privateLinks li {
   list-style: none;
   font-weight: bolder;
   cursor: pointer;
 }
-.privateLinks li:hover{
+.privateLinks li:hover {
   color: green;
 }
-.privateLinks .active{
+.privateLinks .active {
   color: green;
 }
-.private h1, .giveAccess h2{
+.private h1,
+.giveAccess h2 {
   color: var(--black-color);
 }
 .private form {
@@ -114,7 +115,7 @@
   color: var(--white);
   font-weight: bolder;
 }
-.logout{
+.logout {
   max-width: 300px;
   padding: 15px 40px;
   margin: 0 auto;
@@ -125,6 +126,6 @@
   color: white;
   font-weight: bolder;
 }
-.logout:hover{
+.logout:hover {
   box-shadow: 0 0 10px red;
 }

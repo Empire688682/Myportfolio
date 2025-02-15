@@ -21,7 +21,8 @@ const HomePage = () => {
   const getData = async () => {
     try {
       setLoading(true);
-      const baseURL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const baseURL =
+        process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
       const response = await axios.get(`${baseURL}/api/data/get`);
       if (response.data.success) {
         setDatas(response.data.data);

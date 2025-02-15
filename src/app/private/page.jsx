@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 import { useGlobalContext } from "@/Component/Context";
 
 const Page = () => {
-  const {logoutAdmin} = useGlobalContext();
+  const { logoutAdmin } = useGlobalContext();
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState(null);
@@ -38,26 +38,30 @@ const Page = () => {
   };
 
   const userControler = async () => {
-    const baseUrl = signupState === "signup" ? "api/auth/signup" : "api/auth/login"
+    const baseUrl =
+      signupState === "signup" ? "api/auth/signup" : "api/auth/login";
     try {
       setLoading(true);
       const response = await axios.post(baseUrl, data, {
         headers: {
-          'Content-Type': 'application/json',
-        }
+          "Content-Type": "application/json",
+        },
       });
       if (response.data.success) {
         setData({
           username: "",
           email: "",
           password: "",
-          emailOrUsername:"",
+          emailOrUsername: "",
         });
         if (typeof window !== "undefined") {
-          localStorage.setItem("userAccessData", JSON.stringify(response.data.data));
+          localStorage.setItem(
+            "userAccessData",
+            JSON.stringify(response.data.data),
+          );
         }
         alert(response.data.message);
-        router.push("/admin")
+        router.push("/admin");
       }
     } catch (error) {
       if (error.response) {
@@ -84,8 +88,7 @@ const Page = () => {
   const handleGiveAccess = () => {
     if (Number(accessCode) === Number(process.env.NEXT_PUBLIC_ADMIN_PASS_KEY)) {
       setGiveAccess(true);
-    }
-    else {
+    } else {
       alert("Wrong Access Code");
     }
   };
@@ -94,7 +97,13 @@ const Page = () => {
     return (
       <div className={style.giveAccess}>
         <h2>Enter Your Access Code</h2>
-        <input type="text" onChange={(e) => setAccessCode(e.target.value)} value={accessCode} name="code" placeholder="Access Code" />
+        <input
+          type="text"
+          onChange={(e) => setAccessCode(e.target.value)}
+          value={accessCode}
+          name="code"
+          placeholder="Access Code"
+        />
         <button onClick={handleGiveAccess}>Submit</button>
       </div>
     );
@@ -102,86 +111,88 @@ const Page = () => {
 
   return (
     <section>
-      {
-        !userAccessData && (
-          <div className={style.private}>
-            <ul className={style.privateLinks}>
-              <li className={signupState === "login" ? style.active : ""} onClick={() => setSignupState("login")}>Login</li>
-              <li className={signupState === "signup" ? style.active : ""} onClick={() => setSignupState("signup")}>Signup</li>
-            </ul>
-            <h1>Welcome to your private room</h1>
-            <form onSubmit={handleSubmission}>
-              {
-                signupState === "signup" && (
-                  <input
-                    className={style.emailInput}
-                    onChange={handleOnchange}
-                    type="text"
-                    value={data.username}
-                    name="username"
-                    placeholder="Username"
-                    required
-                  />
-                )
-              }
-             {
-              signupState === "signup" && (
-                <input
-                  className={style.emailInput}
-                  onChange={handleOnchange}
-                  type="email"
-                  value={data.email}
-                  name="email"
-                  placeholder="Email"
-                  required
-                />
-              )
-             }
-             {
-              signupState === "login" && (
-                <input
-                  className={style.emailInput}
-                  onChange={handleOnchange}
-                  type="text"
-                  value={data.emailOrUsername}
-                  name="emailOrUsername"
-                  placeholder="Email or Username"
-                  required
-                />
-              )
-             }
-              <div className={style.pwdCon}>
-                <input
-                  className={style.pwdConInput}
-                  onChange={handleOnchange}
-                  value={data.password}
-                  type={`${showPassword ? "text" : "password"}`}
-                  name="password"
-                  placeholder="Password"
-                  required
-                />
-                <p onClick={() => setShowPassword(!showPassword)}>
-                  {showPassword ? <BiSolidHide /> : <BiShow />}
-                </p>
-              </div>
-              {errorMsg && <span>{errorMsg}</span>}
+      {!userAccessData && (
+        <div className={style.private}>
+          <ul className={style.privateLinks}>
+            <li
+              className={signupState === "login" ? style.active : ""}
+              onClick={() => setSignupState("login")}
+            >
+              Login
+            </li>
+            <li
+              className={signupState === "signup" ? style.active : ""}
+              onClick={() => setSignupState("signup")}
+            >
+              Signup
+            </li>
+          </ul>
+          <h1>Welcome to your private room</h1>
+          <form onSubmit={handleSubmission}>
+            {signupState === "signup" && (
               <input
-                disabled={loading}
-                className={style.submitInput}
-                type="submit"
-                value={loading ? "Loading......" : "FIRE"}
+                className={style.emailInput}
+                onChange={handleOnchange}
+                type="text"
+                value={data.username}
+                name="username"
+                placeholder="Username"
+                required
               />
-            </form>
-          </div>
-        )
-      }
-      {
-        userAccessData && (
-          <div className={style.private}>
-            <button className={style.logout} onClick={logoutAdmin}>LOGOUT</button>
-          </div>
-        )
-      }
+            )}
+            {signupState === "signup" && (
+              <input
+                className={style.emailInput}
+                onChange={handleOnchange}
+                type="email"
+                value={data.email}
+                name="email"
+                placeholder="Email"
+                required
+              />
+            )}
+            {signupState === "login" && (
+              <input
+                className={style.emailInput}
+                onChange={handleOnchange}
+                type="text"
+                value={data.emailOrUsername}
+                name="emailOrUsername"
+                placeholder="Email or Username"
+                required
+              />
+            )}
+            <div className={style.pwdCon}>
+              <input
+                className={style.pwdConInput}
+                onChange={handleOnchange}
+                value={data.password}
+                type={`${showPassword ? "text" : "password"}`}
+                name="password"
+                placeholder="Password"
+                required
+              />
+              <p onClick={() => setShowPassword(!showPassword)}>
+                {showPassword ? <BiSolidHide /> : <BiShow />}
+              </p>
+            </div>
+            {errorMsg && <span>{errorMsg}</span>}
+            <input
+              disabled={loading}
+              className={style.submitInput}
+              type="submit"
+              value={loading ? "Loading......" : "FIRE"}
+            />
+          </form>
+        </div>
+      )}
+      {userAccessData && (
+        <div className={style.private}>
+          <button className={style.logout} onClick={logoutAdmin}>
+            LOGOUT
+          </button>
+        </div>
+      )}
     </section>
   );
 };

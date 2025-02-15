@@ -5,7 +5,7 @@ export function middleware(req) {
   const token = req.cookies.get("AdminToken")?.value || "";
   const isAdmin = path === "/admin";
 
-  if (!token && (isAdmin)) {
+  if (!token && isAdmin) {
     return NextResponse.redirect(new URL("/private", req.url), { status: 307 });
   }
 }

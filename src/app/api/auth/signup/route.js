@@ -46,13 +46,16 @@ const createAdmin = async (req) => {
       await newAdmin.save();
 
       const token = jwt.sign({ id: newAdmin._id }, process.env.JWT_SECRET_KEY);
-      const res = NextResponse.json({
-        success: true,
-        data: newAdmin.username,
-        message: "Admin added"
-      }, {
-        status: 200
-      });
+      const res = NextResponse.json(
+        {
+          success: true,
+          data: newAdmin.username,
+          message: "Admin added",
+        },
+        {
+          status: 200,
+        },
+      );
       res.cookies.set("AdminToken", token, {
         secure: process.env.NODE_ENV === "production",
         maxAge: 2 * 24 * 60 * 60,

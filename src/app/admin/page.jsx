@@ -7,7 +7,7 @@ import { useGlobalContext } from "@/Component/Context";
 import { LuLogOut } from "react-icons/lu";
 
 const Page = () => {
-  const {logoutAdmin} = useGlobalContext();
+  const { logoutAdmin } = useGlobalContext();
   const [image, setImage] = useState(null);
   const [data, setData] = useState({
     title: "",
@@ -32,7 +32,8 @@ const Page = () => {
 
     try {
       setLoading(true);
-      const baseURL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const baseURL =
+        process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
       const response = await axios.post(`${baseURL}/api/data/add`, formData);
       if (response.data.success) {
         setData({
@@ -69,8 +70,10 @@ const Page = () => {
   return (
     <div className={style.container}>
       <div className={style.header}>
-      <h1>Admin Panel</h1>
-      <p className={style.logout} onClick={logoutAdmin}><LuLogOut /> <span>Logout</span></p>
+        <h1>Admin Panel</h1>
+        <p className={style.logout} onClick={logoutAdmin}>
+          <LuLogOut /> <span>Logout</span>
+        </p>
       </div>
       <ul className={style.adminMenus}>
         <li

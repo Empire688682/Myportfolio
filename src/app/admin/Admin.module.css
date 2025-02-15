@@ -3,12 +3,12 @@
   width: 100%;
   padding: 0 5% 50px 5%;
 }
-.header{
+.header {
   display: flex;
   align-items: center;
   gap: 100px;
 }
-.logout{
+.logout {
   font-size: 15px;
   display: flex;
   flex-direction: column;
@@ -20,7 +20,7 @@
   padding: 10px;
   border-radius: 50%;
 }
-.logout:hover{
+.logout:hover {
   box-shadow: 0 0 10px red;
 }
 .adminMenus {

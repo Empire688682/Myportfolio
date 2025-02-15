@@ -1,4 +1,3 @@
-
 .containerCart {
   display: flex;
   flex-direction: column;
@@ -33,6 +32,6 @@
   color: blue;
 }
 
-.linkP{
+.linkP {
   font-weight: bolder;
 }

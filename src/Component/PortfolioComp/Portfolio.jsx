@@ -15,7 +15,9 @@ const PortfolioCart = ({ data, category }) => {
         </div>
         <h3>{data.title}</h3>
         <p>{data.category}</p>
-        <p className={styles.linkP}>Visit: <a href={data.link}>{data.title}</a></p>
+        <p className={styles.linkP}>
+          Visit: <a href={data.link}>{data.title}</a>
+        </p>
       </div>
     </div>
   );
