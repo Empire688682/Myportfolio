@@ -16,8 +16,8 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding-top: 200px;
-  padding-bottom: 100px;
+  padding-top: 100px;
+  padding-bottom: 50px;
   padding-left: 5%;
   padding-right: 5%;
   gap: 30px;
@@ -29,10 +29,6 @@
 .exportCompCon {
   background-color: var(--navbar-color);
 }
-.serviceCompCon {
-  transform: translateY(-100px);
-}
-
 .textCon {
   flex-basis: 45%;
   min-width: 300px;

@@ -22,12 +22,11 @@
   padding-left: 5%;
   padding-right: 5%;
   color: var(--text-color);
-  margin-bottom: 50px;
+  margin: 50px 0;
 }
 
 @media (max-width: 850px) {
   .container .all_p {
     padding: 0 40px 5% 5%;
-    text-align: center;
   }
 }

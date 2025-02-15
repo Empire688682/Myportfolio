@@ -6,7 +6,6 @@
   padding-left: 5%;
   padding-right: 5%;
   width: 100%;
-  margin-bottom: 100px;
   gap: 20px;
 }
 .textCon {
@@ -138,7 +137,6 @@
   .textCon {
     flex-basis: 100%;
     min-width: 300px;
-    margin-bottom: 50px;
   }
   .imageB4 {
     flex-basis: 100%;

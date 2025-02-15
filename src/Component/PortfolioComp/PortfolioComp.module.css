@@ -1,9 +1,4 @@
-.imageCon {
-  width: 300px;
-  position: relative;
-  height: 200px;
-  margin: 20px;
-}
+
 .containerCart {
   display: flex;
   flex-direction: column;
@@ -23,6 +18,12 @@
   border-radius: 9px;
   margin-bottom: 40px;
 }
+.imageCon {
+  width: 300px;
+  position: relative;
+  height: 200px;
+  margin: 20px;
+}
 .containerCart h3,
 .observerCatch h3 {
   color: var(--black-color);
@@ -30,4 +31,8 @@
 .containerCart a,
 .observerCatch a {
   color: blue;
+}
+
+.linkP{
+  font-weight: bolder;
 }

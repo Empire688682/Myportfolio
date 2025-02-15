@@ -10,6 +10,7 @@ const Page = () => {
   const [loading, setLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState(null);
   const [giveAccess, setGiveAccess] = useState(false);
+  const [signupState, setSignupState] = useState("signup");
 
   const [data, setData] = useState({
     name: "",
@@ -17,9 +18,7 @@ const Page = () => {
     password: "",
   });
 
-  const [accessCode, setAccessCode] = useState({
-    code: "",
-  });
+  const [accessCode, setAccessCode] = useState("");
 
   const handleOnchange = (e) => {
     const { name, value } = e.target;
@@ -62,13 +61,8 @@ const Page = () => {
     registerUser();
   };
 
-  const handleAccessCodeOnchange = (e) => {
-    const { name, value } = e.target;
-    setAccessCode((prev) => ({ ...prev, [name]: value }));
-  };
-
   const handleGiveAccess = () => {
-    if (Number(accessCode.code) === Number(process.env.NEXT_PUBLIC_ADMIN_PASS_KEY)) {
+    if (Number(accessCode) === Number(process.env.NEXT_PUBLIC_ADMIN_PASS_KEY)) {
       setGiveAccess(true);
     }
     else {
@@ -80,7 +74,7 @@ const Page = () => {
     return (
       <div className={style.giveAccess}>
         <h2>Enter Your Access Code</h2>
-        <input type="text" onChange={handleAccessCodeOnchange} value={accessCode.code} name="code" placeholder="Access Code" />
+        <input type="text" onChange={(e)=>setAccessCode(e.target.value)} value={accessCode} name="code" placeholder="Access Code" />
         <button onClick={handleGiveAccess}>Submit</button>
       </div>
     );
