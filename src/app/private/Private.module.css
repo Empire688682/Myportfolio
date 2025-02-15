@@ -115,3 +115,17 @@
   color: var(--white);
   font-weight: bolder;
 }
+.logout{
+  max-width: 300px;
+  padding: 15px 40px;
+  margin: 0 auto;
+  cursor: pointer;
+  border: none;
+  background-color: red;
+  border-radius: 5px;
+  color: white;
+  font-weight: bolder;
+}
+.logout:hover{
+  box-shadow: 0 0 10px red;
+}

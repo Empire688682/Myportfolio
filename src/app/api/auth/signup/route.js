@@ -10,7 +10,7 @@ const createAdmin = async (req) => {
     await connectDb();
     try {
       const reqBody = await req.json();
-      const { name, email, password } = reqBody;
+      const { username, email, password } = reqBody;
       const userExist = await adminModel.findOne({ email });
 
       if (userExist) {
@@ -25,7 +25,7 @@ const createAdmin = async (req) => {
           { status: 400 },
         );
       }
-      if (!name || !email || !password) {
+      if (!username || !email || !password) {
         return NextResponse.json(
           { success: false, message: "All field required" },
           { status: 400 },
@@ -39,7 +39,7 @@ const createAdmin = async (req) => {
       }
       const hashPassword = await bcrypt.hash(password, 10);
       const newAdmin = new adminModel({
-        name,
+        username,
         email,
         password: hashPassword,
       });
@@ -48,7 +48,7 @@ const createAdmin = async (req) => {
       const token = jwt.sign({ id: newAdmin._id }, process.env.JWT_SECRET_KEY);
       const res = NextResponse.json({
         success: true,
-        data: newAdmin,
+        data: newAdmin.username,
         message: "Admin added"
       }, {
         status: 200
@@ -63,7 +63,7 @@ const createAdmin = async (req) => {
     } catch (error) {
       console.log("CreateAdmin Error:", error);
       return NextResponse.json(
-        { success: false, message: "unable to create admin" },
+        { success: false, message: "unable to add admin" },
         { status: 500 },
       );
     }
