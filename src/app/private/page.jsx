@@ -87,13 +87,19 @@ const Page = () => {
     userControler();
   };
 
-  const handleGiveAccess = () => {
-    if (Number(accessCode) === Number(process.env.ADMIN_PASS_KEY)) {
-      setGiveAccess(true);
-    } else {
-      alert(`Invalid Access Code :${Number(process.env.ADMIN_PASS_KEY)}, ${accessCode}`);
+  const handleGiveAccess = async () => {
+    try {
+      const response = await axios.post("api/auth/validateAccess", { accessCode });
+      if (response.data.success) {
+        setGiveAccess(true);
+      } else {
+        alert("Invalid Access Code");
+      }
+    } catch (error) {
+      alert("Error validating access");
     }
   };
+  
 
   if (!giveAccess) {
     return (
