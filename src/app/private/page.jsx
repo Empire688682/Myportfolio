@@ -86,7 +86,7 @@ const Page = () => {
   };
 
   const handleGiveAccess = () => {
-    if (Number(accessCode) === Number(process.env.NEXT_PUBLIC_ADMIN_PASS_KEY)) {
+    if (Number(accessCode) === Number(process.env.ADMIN_PASS_KEY)) {
       setGiveAccess(true);
     } else {
       alert("Wrong Access Code");
