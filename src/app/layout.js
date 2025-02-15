@@ -4,6 +4,7 @@ import Navbar from "@/Component/navbar/Navbar";
 import Footer from "@/Component/Footer/Footer";
 import { useState, useEffect } from "react";
 import Head from "next/head";
+import { AppProvider } from "@/Component/Context";
 
 ///export const metadata = {
 //title: "JayEmpire",
@@ -41,29 +42,13 @@ export default function RootLayout({ children }) {
           content="This is JayEmpire personal Portfolio"
         />
         <meta name="author" content="JayEmpire" />
-        <meta
-          name="format-detection"
-          content="telephone=no, date=no, email=no, address=no"
-        />
-        <meta property="og:title" content="JayEmpire" />
-        <meta
-          property="og:description"
-          content="This is a description of my Next.js app"
-        />
-        <meta property="og:image" content="URL to your image" />
-        <meta property="og:url" content="URL of your app" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="JayEmpire" />
-        <meta
-          name="twitter:description"
-          content="This is JayEmpire ersonal Portfolio"
-        />
-        <meta name="twitter:image" content="URL to your image" />
       </Head>
       <body className={theme === "light" ? "container" : "container dark-mode"}>
-        <Navbar theme={theme} setTheme={setTheme} toggleTheme={toggleTheme} />
-        <div className="Content">{children}</div>
-        <Footer />
+        <AppProvider>
+          <Navbar theme={theme} setTheme={setTheme} toggleTheme={toggleTheme} />
+          <div className="Content">{children}</div>
+          <Footer />
+        </AppProvider>
       </body>
     </html>
   );

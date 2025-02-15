@@ -3,8 +3,11 @@ import React, { useState } from "react";
 import style from "./Admin.module.css";
 import Image from "next/image";
 import axios from "axios";
+import { useGlobalContext } from "@/Component/Context";
+import { LuLogOut } from "react-icons/lu";
 
 const Page = () => {
+  const {logoutAdmin} = useGlobalContext();
   const [image, setImage] = useState(null);
   const [data, setData] = useState({
     title: "",
@@ -65,7 +68,10 @@ const Page = () => {
 
   return (
     <div className={style.container}>
+      <div className={style.header}>
       <h1>Admin Panel</h1>
+      <p className={style.logout} onClick={logoutAdmin}><LuLogOut /> <span>Logout</span></p>
+      </div>
       <ul className={style.adminMenus}>
         <li
           className={menu === "add" ? style.active : ""}

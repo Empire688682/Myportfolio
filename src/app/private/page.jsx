@@ -5,22 +5,24 @@ import { BiSolidHide } from "react-icons/bi";
 import { BiShow } from "react-icons/bi";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+import { useGlobalContext } from "@/Component/Context";
 
 const Page = () => {
+  const {logoutAdmin} = useGlobalContext();
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState(null);
   const [giveAccess, setGiveAccess] = useState(false);
   const [signupState, setSignupState] = useState("signup");
-  const [userAccessData, setUserAccessData] = useState("fjfjf");
+  const [userAccessData, setUserAccessData] = useState("");
   const router = useRouter();
 
- // useEffect(() => {
-  //  if (typeof window !== "undefined") {
-  //    const storedData = localStorage.getItem("userAccessData");
-  //    setUserAccessData(storedData ? JSON.parse(storedData) : "");
-  //  }
-//  }, []);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const storedData = localStorage.getItem("userAccessData");
+      setUserAccessData(storedData ? JSON.parse(storedData) : "");
+    }
+  }, []);
 
   const [data, setData] = useState({
     username: "",
@@ -55,6 +57,7 @@ const Page = () => {
           localStorage.setItem("userAccessData", JSON.stringify(response.data.data));
         }
         alert(response.data.message);
+        router.push("/admin")
       }
     } catch (error) {
       if (error.response) {
@@ -86,19 +89,6 @@ const Page = () => {
       alert("Wrong Access Code");
     }
   };
-
-  const logoutAdmin = async () =>{
-    try {
-      const response = await axios.post("api/auth/signout");
-      if(response.data.success){
-        localStorage.removeItem("userAccessData");
-        router.push("/");
-      }
-    } catch (error) {
-      console.log("LogoutError:", error);
-      alert("Unable to logout admin");
-    }
-  }
 
   if (!giveAccess) {
     return (
@@ -176,6 +166,7 @@ const Page = () => {
               </div>
               {errorMsg && <span>{errorMsg}</span>}
               <input
+                disabled={loading}
                 className={style.submitInput}
                 type="submit"
                 value={loading ? "Loading......" : "FIRE"}

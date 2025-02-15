@@ -3,6 +3,26 @@
   width: 100%;
   padding: 0 5% 50px 5%;
 }
+.header{
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+.logout{
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  align-items: center;
+  color: red;
+  font-weight: bolder;
+  border: 1px solid;
+  padding: 10px;
+  border-radius: 50%;
+}
+.logout:hover{
+  box-shadow: 0 0 10px red;
+}
 .adminMenus {
   display: flex;
   gap: 10px;
