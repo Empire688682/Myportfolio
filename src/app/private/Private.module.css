@@ -51,6 +51,25 @@
   flex-direction: column;
   text-align: center;
 }
+.privateLinks{
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.privateLinks li{
+  list-style: none;
+  font-weight: bolder;
+  cursor: pointer;
+}
+.privateLinks li:hover{
+  color: green;
+}
+.privateLinks .active{
+  color: green;
+}
 .private h1, .giveAccess h2{
   color: var(--black-color);
 }

@@ -82,9 +82,15 @@ const Page = () => {
 
   return (
     <div className={style.private}>
+      <ul className={style.privateLinks}>
+        <li className={signupState === "login"? style.active : ""} onClick={()=>setSignupState("login")}>Login</li>
+        <li className={signupState === "signup"? style.active : ""} onClick={()=>setSignupState("signup")}>Signup</li>
+      </ul>
       <h1>Welcome to your private room</h1>
       <form onSubmit={handleSubmission}>
-        <input
+       {
+        signupState === "signup" && (
+          <input
           className={style.emailInput}
           onChange={handleOnchange}
           type="text"
@@ -93,6 +99,8 @@ const Page = () => {
           placeholder="Name"
           required
         />
+        )
+       }
         <input
           className={style.emailInput}
           onChange={handleOnchange}
