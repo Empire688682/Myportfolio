@@ -32,7 +32,7 @@ const Page = () => {
 
     try {
       setLoading(true);
-      const response = await axios.post("api/data/add", formData);
+      const response = await axios.post("/api/data/add", formData);
       if (response.data.success) {
         setData({
           title: "",
