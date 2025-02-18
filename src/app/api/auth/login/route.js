@@ -23,7 +23,6 @@ const loginUser = async (req) => {
       const user = await adminModel.findOne({
         $or: [{ email: emailOrUsername }, { username: emailOrUsername }],
       });
-      console.log("User:", user);
       if (!user) {
         return NextResponse.json(
           { success: false, message: "User not found" },
