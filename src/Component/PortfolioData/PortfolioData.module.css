@@ -1,0 +1,37 @@
+.container{
+    width: 100%;
+    margin-top: 20px;
+}
+.headers{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+.footers{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    align-items: center;
+}
+.headers div{
+    flex-basis: 23%;
+    color: var(--text-color);
+}
+.footers div{
+    flex-basis: 23%;
+    color: var(--black-color);
+}
+.removeIcon{
+    font-size: 25px;
+    cursor: pointer;
+}
+.container h2{
+    margin-top: 20px;
+}
+
+@media (max-width:700px){
+    .imageDiv{
+        display: none;
+    }
+}

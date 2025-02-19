@@ -5,6 +5,7 @@ import Image from "next/image";
 import axios from "axios";
 import { useGlobalContext } from "@/Component/Context";
 import { LuLogOut } from "react-icons/lu";
+import PortfolioData from "@/Component/PortfolioData/PortfolioData";
 
 const Page = () => {
   const { logoutAdmin } = useGlobalContext();
@@ -16,7 +17,7 @@ const Page = () => {
   });
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(null);
-  const [menu, setMenu] = useState("add");
+  const [menu, setMenu] = useState("list");
 
   const handleOnChange = (e) => {
     const { name, value } = e.target;
@@ -156,7 +157,7 @@ const Page = () => {
         <div>
           <h2>Data list</h2>
           <div className={style.addDataContainer}>
-            <p>Comming Soon</p>
+            <PortfolioData/>
           </div>
         </div>
       )}
