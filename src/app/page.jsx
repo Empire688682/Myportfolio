@@ -59,7 +59,7 @@ const HomePage = () => {
           </Link>
         </div>
         <div className={styles.imageCon}>
-          <Image className={styles.homepage_img} src="/about.png" alt="" fill />
+          <Image className={styles.homepage_img} src="/coding.jpg" alt="" fill />
         </div>
       </div>
       <div className={styles.exportCompCon}>

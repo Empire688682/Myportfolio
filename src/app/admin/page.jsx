@@ -17,7 +17,7 @@ const Page = () => {
   });
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(null);
-  const [menu, setMenu] = useState("list");
+  const [menu, setMenu] = useState("add");
 
   const handleOnChange = (e) => {
     const { name, value } = e.target;
