@@ -29,9 +29,10 @@
 }
 .containerCart a,
 .observerCatch a {
-  color: blue;
+  color: var(--black-color);
 }
 
 .linkP {
   font-weight: bolder;
+  padding-bottom: 20px;
 }
