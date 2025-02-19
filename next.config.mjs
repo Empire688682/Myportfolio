@@ -1,7 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    unoptimized: true, // Disable Next.js's image optimization
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "harlequin-leading-basilisk-182.mypinata.cloud",
+        pathname: "/ipfs/**",
+      }
+    ]
   },
 };
 

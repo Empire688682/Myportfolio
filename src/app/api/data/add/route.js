@@ -9,7 +9,7 @@ import { promisify } from "util";
 
 dotenv.config();
 
-const pinata = new PinataSDK({ pinataJwt: process.env.PINITA_JWT});
+const pinata = new PinataSDK({ pinataJWTKey: process.env.PINITA_JWT});
 const writeFile = promisify(fs.writeFile);
 const unlinkFile = promisify(fs.unlink);
 
@@ -70,7 +70,7 @@ const addData = async (req) => {
       await unlinkFile(tempFilePath);
 
       const newData = new dataModel({
-        image: `${process.env.BASE_URL}/ipfs/${imageResult.IpfsHash}`,
+        image: `${process.env.PINTA_URL}/${imageResult.IpfsHash}?pinataGatewayToken=${process.env.PINTA_GATEWAY}`,
         title,
         category,
         link,
