@@ -103,6 +103,16 @@ const HomePage = () => {
               </p>
               <p
                 className={
+                  category === "Social media" ? styles.active : styles.category
+                }
+                onClick={() =>
+                  setCategory(category === "Social media" ? "All" : "Social media")
+                }
+              >
+                Social Media
+              </p>
+              <p
+                className={
                   category === "Blog" ? styles.active : styles.category
                 }
                 onClick={() =>

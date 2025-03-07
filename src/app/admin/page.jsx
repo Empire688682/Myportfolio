@@ -132,6 +132,7 @@ const Page = () => {
                 </option>
                 <option value="Portfolio">Portfolio</option>
                 <option value="e-Commerce">e-Commerce</option>
+                <option value="Social media">Social Media</option>
                 <option value="Blog">Blog</option>
                 <option value="Landing Page">Landing Page</option>
                 <option value="Personal Website">Personal Website</option>

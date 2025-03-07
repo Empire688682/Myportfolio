@@ -2,7 +2,7 @@ import styles from "./PortfolioComp.module.css";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 
-const PortfolioCart = ({ data, category }) => {
+const PortfolioCart = ({ data }) => {
   const { ref: cl1Ref, inView: cl1View } = useInView({ triggerOnce: true });
   return (
     <div className={styles.container}>
