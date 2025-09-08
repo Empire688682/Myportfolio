@@ -86,6 +86,18 @@ const Portfolio = () => {
           </p>
           <p
             className={
+              category === "Mobile app" ? styles.active : styles.category
+            }
+            onClick={() =>
+              setCategory((prev) =>
+                prev === "Mobile app" ? "All" : "Mobile app",
+              )
+            }
+          >
+            Mobile App
+          </p>
+          <p
+            className={
               category === "Social media" ? styles.active : styles.category
             }
             onClick={() =>

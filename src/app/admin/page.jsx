@@ -139,6 +139,7 @@ const Page = () => {
                   Choose Category
                 </option>
                 <option value="Portfolio">Portfolio</option>
+                <option value="Mobile app">Mobile App</option>
                 <option value="e-Commerce">e-Commerce</option>
                 <option value="Social media">Social Media</option>
                 <option value="Blog">Blog</option>
