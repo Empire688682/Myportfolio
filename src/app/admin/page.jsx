@@ -27,6 +27,7 @@ const Page = () => {
 
   const addDataToDb = async () => {
     if(!image) return
+    setLoading(true);
     const imageUrl = await uploadImage(image);
     if(!imageUrl){
       window.alert("Image upload error");
@@ -39,7 +40,6 @@ const Page = () => {
     formData.append("link", data.link);
 
     try {
-      setLoading(true);
       const response = await axios.post("/api/data/add", formData);
       if (response.data.success) {
         setData({
