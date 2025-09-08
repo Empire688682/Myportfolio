@@ -6,6 +6,7 @@ import axios from "axios";
 import { useGlobalContext } from "@/Component/Context";
 import { LuLogOut } from "react-icons/lu";
 import PortfolioData from "@/Component/PortfolioData/PortfolioData";
+import uploadImage from "@/Component/utils/uplaodImage";
 
 const Page = () => {
   const { logoutAdmin } = useGlobalContext();
@@ -25,8 +26,14 @@ const Page = () => {
   };
 
   const addDataToDb = async () => {
+    if(!image) return
+    const imageUrl = await uploadImage(image);
+    if(!imageUrl){
+      window.alert("Image upload error");
+      return;
+    }
     const formData = new FormData();
-    formData.append("image", image);
+    formData.append("image", imageUrl);
     formData.append("title", data.title);
     formData.append("category", data.category);
     formData.append("link", data.link);

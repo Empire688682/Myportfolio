@@ -17,11 +17,11 @@ const Navbar = ({ theme, toggleTheme }) => {
       <div className={styles.modeCon}>
         {theme === "light" ? (
           <div className={styles.icons} onClick={() => toggleTheme()}>
-            <img src="/moon_icon.png" alt="moon icon" width="25px" />
+            <img src="/moon_icon.png" alt="moon icon" width="20px" />
           </div>
         ) : (
           <div className={styles.icons} onClick={() => toggleTheme()}>
-            <img src="/sun_icon.png" alt="sun icon" width="25px" />
+            <img src="/sun_icon.png" alt="sun icon" width="20px" />
           </div>
         )}
       </div>
@@ -41,7 +41,7 @@ const Navbar = ({ theme, toggleTheme }) => {
                   : "/dark_close_menu.png"
               }
               alt="close menu icon"
-              width="40px"
+              width="30px"
             />
           </div>
         ) : (
@@ -52,7 +52,7 @@ const Navbar = ({ theme, toggleTheme }) => {
             <img
               src={theme === "dark" ? "/light_menu.png" : "/dark_menu.png"}
               alt="menu icon"
-              width="40px"
+              width="30px"
             />
           </div>
         )}
