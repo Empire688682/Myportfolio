@@ -57,7 +57,7 @@ const PortfolioData = () => {
               datas.length > 0 ?
                 <div>
                   {
-                    datas.map((data) => (
+                    [...datas].reverse().map((data) => (
                       <div className={style.footers} key={data._id}>
                         <div>{data.title}</div>
                         <div className={style.imageDiv}>
