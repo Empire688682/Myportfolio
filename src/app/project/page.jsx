@@ -50,7 +50,7 @@ const Portfolio = () => {
       </div>
       <div className={styles.content}>
         <div className={styles.portfolioConHead}>
-          <h1>Our Latest Featured Projects</h1>
+          <h1>Our All Featured Projects</h1>
           <p>Who are in extremely love with eco-friendly systems.</p>
         </div>
         <div className={styles.categories}>
@@ -143,7 +143,7 @@ const Portfolio = () => {
                   </div>
                 );
               }
-              // No return null here
+             <p>No return null here</p>
             })}
           </div>
         )}

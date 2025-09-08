@@ -44,7 +44,18 @@
   cursor: pointer;
   position: relative;
 }
-.modeCon .modeIconSun {
+.modeCon {
+  cursor: pointer;
+  color: white;
+  position: fixed;
+  right: 0;
+  top: 20%;
+  padding: 10px;
+  background-color: var(--navbar-color);
+  border: 2px solid var(--text-color) ;
+  border-radius: 50%;
+}
+.modeIconSun {
   font-size: 40px;
   cursor: pointer;
   color: white;

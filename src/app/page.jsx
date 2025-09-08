@@ -89,7 +89,7 @@ const HomePage = () => {
         <div className={styles.portfolio}>
           <div className={styles.content}>
             <div className={styles.portfolioConHead}>
-              <h1>Our All Featured Projects</h1>
+              <h1>Our Featured Projects</h1>
               <p>Who are in extremely love with eco friendly system.</p>
             </div>
             {loading ? (
@@ -111,7 +111,7 @@ const HomePage = () => {
               </div>
               {
                 datas?.length > 0 && (
-                  <p className={styles.viewMoreBtn} onClick={()=>router.push("/projects")}>View all</p>
+                  <p className={styles.viewMoreBtn} onClick={()=>router.push("/project")}>View all</p>
                 )
               }
              </div>

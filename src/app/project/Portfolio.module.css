@@ -39,7 +39,7 @@
   width: 100%;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 40px;
+  margin: 40px 0;
 }
 .categories p {
   font-weight: bold;
@@ -50,8 +50,8 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  margin: 40px 0;
   justify-content: space-around;
+  gap: 20px;
 }
 .categories .active {
   color: var(--link-color);

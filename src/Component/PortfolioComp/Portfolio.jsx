@@ -11,13 +11,15 @@ const PortfolioCart = ({ data }) => {
         className={`${cl1View ? styles.observerCatch : styles.containerCart}`}
       >
         <div className={styles.imageCon}>
-          <Image src={data.image} className={styles.image} alt="" fill />
+          <Image src={data.image} className={styles.image} alt={data.title} fill />
         </div>
-        <h3>{data.title}</h3>
-        <p>{data.category}</p>
-        <p className={styles.linkP}>
-          Visit: <a href={data.link}>{data.title}</a>
-        </p>
+        <div className={styles.text}>
+          <h3>{data.title}</h3>
+          <p>{data.category}</p>
+          <p className={styles.linkP}>
+            Visit: <a href={data.link}>{data.title}</a>
+          </p>
+        </div>
       </div>
     </div>
   );
