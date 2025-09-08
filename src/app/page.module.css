@@ -108,48 +108,26 @@
   margin-bottom: 20px;
   font-weight: 600;
 }
-.categories {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  text-align: center;
-  width: 100%;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 40px;
-}
-.categories p {
-  font-weight: bold;
-  cursor: pointer;
-  font-weight: 500;
-}
 .portfolioCart {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   margin-top: 40px;
   justify-content: space-around;
   gap: 30px;
-  padding-bottom: 30px;
-  border-bottom: 3px solid white;
 }
-.categories .active {
-  color: var(--link-color);
-}
-.category {
-  position: relative;
+.viewMoreBtn{
+  padding: 15px;
+  text-align: center;
+  background-color: azure;
+  max-width: 150px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border-radius: 9px;
+  cursor: pointer;
   transition: 0.3s ease-in-out;
 }
-.category::before {
-  content: "";
-  width: 0%;
-  position: absolute;
-  background-color: var(--black-color);
-  height: 3px;
-  bottom: -2px;
-  border-radius: 50px;
-  transition: 0.3s ease-in-out;
-}
-.category:hover::before {
-  width: 100%;
+.viewMoreBtn:hover{
+  color: black;
+  background-color: #fff;
 }

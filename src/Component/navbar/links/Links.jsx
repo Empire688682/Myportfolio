@@ -17,16 +17,12 @@ const Links = ({ setShowMenu, showMenu }) => {
       path: "/service",
     },
     {
-      title: "Portfolio",
-      path: "/portfolio",
+      title: "Projects",
+      path: "/project",
     },
     {
       title: "3D Portfolio",
       path: "https://jayempire-3d.vercel.app/",
-    },
-    {
-      title: "Blog",
-      path: "/blog",
     },
     {
       title: "Contact",

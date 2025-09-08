@@ -9,14 +9,17 @@ import { useState, useEffect } from "react";
 import Review from "@/Component/Review/Review";
 import Link from "next/link";
 import { InView, useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 import axios from "axios";
 import LoadingSpinner from "@/Component/LoadingSpinner/LoadingSpinner";
+import { useRouter } from "next/navigation";
 
 const HomePage = () => {
   const [category, setCategory] = useState("All");
   const { ref: cl1Ref, inView: cl1View } = useInView({ triggerOnce: true });
   const [datas, setDatas] = useState([]);
   const [loading, setLoading] = useState(false);
+  const router = useRouter()
 
   const getData = async () => {
     try {
@@ -44,24 +47,39 @@ const HomePage = () => {
         ref={cl1Ref}
         className={cl1View ? styles.observerCatch : styles.homeContainer}
       >
-        <div className={styles.textCon}>
+        <motion.div
+          className={styles.textCon}
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
           <h3>THIS IS ME</h3>
           <h1>Juwon Asehinde</h1>
           <p>
-            A <b>Fullstack Web Developer</b> with a passion for building dynamic
-            and efficient web applications that deliver seamless user
-            experiences Whether you&#39;re a small business or an enterprise, I
-            offer tailored solutions to bring your vision to life—from engaging
-            front-end designs to powerful, scalable back-end systems.
+            A <b>Fullstack Web Developer</b> passionate about creating dynamic and efficient
+            applications. From engaging front-end designs to scalable back-end systems,
+            I deliver solutions tailored to your vision.
           </p>
           <Link href="/contact" className={styles.contactBtn}>
             Contact Me
           </Link>
-        </div>
-        <div className={styles.imageCon}>
-          <Image className={styles.homepage_img} src="/fine-jayempire2.png" alt="" fill />
-        </div>
+        </motion.div>
+
+        <motion.div
+          className={styles.imageCon}
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
+        >
+          <Image
+            className={styles.homepage_img}
+            src="/fine-jayempire2.png"
+            alt="Portfolio Hero"
+            fill
+          />
+        </motion.div>
       </div>
+
       <div className={styles.exportCompCon}>
         <AboutComp />
         <div className={styles.serviceCompCon}>
@@ -74,89 +92,13 @@ const HomePage = () => {
               <h1>Our All Featured Projects</h1>
               <p>Who are in extremely love with eco friendly system.</p>
             </div>
-            <div className={styles.categories}>
-              <p
-                className={category === "All" ? styles.active : styles.category}
-                onClick={() => setCategory("All")}
-              >
-                All
-              </p>
-              <p
-                className={
-                  category === "Portfolio" ? styles.active : styles.category
-                }
-                onClick={() =>
-                  setCategory(category === "Portfolio" ? "All" : "Portfolio")
-                }
-              >
-                Portfolio
-              </p>
-              <p
-                className={
-                  category === "e-Commerce" ? styles.active : styles.category
-                }
-                onClick={() =>
-                  setCategory(category === "e-Commerce" ? "All" : "e-Commerce")
-                }
-              >
-                e-Commerce
-              </p>
-              <p
-                className={
-                  category === "Social media" ? styles.active : styles.category
-                }
-                onClick={() =>
-                  setCategory(category === "Social media" ? "All" : "Social media")
-                }
-              >
-                Social Media
-              </p>
-              <p
-                className={
-                  category === "Blog" ? styles.active : styles.category
-                }
-                onClick={() =>
-                  setCategory(category === "Blog" ? "All" : "Blog")
-                }
-              >
-                Blog
-              </p>
-              <p
-                className={
-                  category === "Landing Page" ? styles.active : styles.category
-                }
-                onClick={() =>
-                  setCategory(
-                    category === "Landing Page" ? "All" : "Landing Page",
-                  )
-                }
-              >
-                Landing Page
-              </p>
-              <p
-                className={
-                  category === "Personal Website"
-                    ? styles.active
-                    : styles.category
-                }
-                onClick={() =>
-                  setCategory(
-                    category === "Personal Website"
-                      ? "All"
-                      : "Personal Website",
-                  )
-                }
-              >
-                Personal Website
-              </p>
-            </div>
             {loading ? (
               <LoadingSpinner />
             ) : (
-              <div className={styles.portfolioCart}>
-                {datas.map((data) => {
-                  if (category === "All" || category === data.category) {
-                    return (
+             <div>
+               <div className={styles.portfolioCart}>
+                {[...datas].reverse().slice(0,3).map((data) => {
+                  return (
                       <div key={data._id}>
                         <PortfolioCart
                           setCategory={setCategory}
@@ -165,10 +107,14 @@ const HomePage = () => {
                         />
                       </div>
                     );
-                  }
-                  // No return null here
                 })}
               </div>
+              {
+                datas?.length > 0 && (
+                  <p className={styles.viewMoreBtn} onClick={()=>router.push("/projects")}>View all</p>
+                )
+              }
+             </div>
             )}
           </div>
         </div>
