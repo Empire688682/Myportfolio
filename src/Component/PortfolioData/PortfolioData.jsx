@@ -16,6 +16,7 @@ const PortfolioData = () => {
       if (response.data.success) {
         setDatas(response.data.data);
       }
+      console.log("response::", response)
     } catch (error) {
       console.log("FetchData Error:", error);
     }
