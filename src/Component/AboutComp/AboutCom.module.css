@@ -12,9 +12,12 @@
   flex-basis: 45%;
   min-width: 350px;
 }
+.textCon h3{
+  color: var(--black-color);
+}
 .textCon h1 {
   font-size: 40px;
-  margin: 20px 0;
+  margin-bottom: 20px;
   color: var(--black-color);
 }
 .textCon p {
