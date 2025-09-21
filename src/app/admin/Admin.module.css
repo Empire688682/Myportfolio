@@ -67,6 +67,7 @@
   position: relative;
 }
 .addDataContainer form input,
+.addDataContainer form textarea,
 .addDataContainer form select {
   max-width: 300px;
   padding: 10px;

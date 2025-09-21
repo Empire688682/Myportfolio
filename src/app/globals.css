@@ -8,6 +8,7 @@
   --navbar-color: #ffffff;
   --bg-color: #f9f9ff;
   --menu-color: black;
+  --cat-color: rgb(54, 50, 50);
   --text-color: #777777;
   --footer-bg: #04091e;
   --link-color: #8490ff;
@@ -21,6 +22,7 @@
 .dark-mode {
   --navbar-color: rgba(0, 0, 0, 1);
   --menu-color: white;
+  --cat-color: rgb(201, 197, 197);
   --text-color: #9b9bb1;
   --footer-bg: rgba(0, 0, 0, 0.9);
   --link-color: rgb(77, 199, 77);

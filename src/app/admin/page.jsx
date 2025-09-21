@@ -13,6 +13,7 @@ const Page = () => {
   const [image, setImage] = useState(null);
   const [data, setData] = useState({
     title: "",
+    description: "",
     category: "",
     link: "",
   });
@@ -44,6 +45,7 @@ const Page = () => {
       if (response.data.success) {
         setData({
           title: "",
+          description: "",
           category: "",
           link: "",
         });
@@ -128,6 +130,15 @@ const Page = () => {
                 value={data.title}
                 onChange={handleOnChange}
                 placeholder="Title"
+                required
+              />
+              <textarea
+                rows={4}
+                cols={30}
+                name="description"
+                value={data.description}
+                onChange={handleOnChange}
+                placeholder="Description"
                 required
               />
               <select

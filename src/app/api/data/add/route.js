@@ -12,6 +12,7 @@ const addData = async (req) => {
       const formData = await req.formData();
       const image = formData.get("image");
       const title = formData.get("title");
+      const description = formData.get("description");
       const category = formData.get("category");
       const link = formData.get("link");
 
@@ -25,6 +26,7 @@ const addData = async (req) => {
       const newData = new dataModel({
         image,
         title,
+        description,
         category,
         link,
       });
