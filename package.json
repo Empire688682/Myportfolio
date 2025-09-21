@@ -17,6 +17,7 @@
     "formidable": "^3.5.2",
     "framer-motion": "^12.23.12",
     "jsonwebtoken": "^9.0.2",
+    "lucide-react": "^0.544.0",
     "mongoose": "^8.3.4",
     "next": "^14.2.5",
     "nodemailer": "^6.9.15",

@@ -62,7 +62,7 @@ const Footer = () => {
         </div>
       </div>
       <p className={styles.copyright}>
-        © 2023 JayEmpire. All rights reserved.
+        © 2023 - {new Date().getFullYear()} JayEmpire. All rights reserved.
       </p>
     </div>
   );

@@ -1,28 +1,38 @@
-import styles from "./PortfolioComp.module.css";
+"use client";
 import Image from "next/image";
-import { useInView } from "react-intersection-observer";
+import styles from "./PortfolioSection.module.css";
 
-const PortfolioCart = ({ data }) => {
-  const { ref: cl1Ref, inView: cl1View } = useInView({ triggerOnce: true });
+const PortfolioSection = ({data}) => {
   return (
-    <div className={styles.container}>
-      <div
-        ref={cl1Ref}
-        className={`${cl1View ? styles.observerCatch : styles.containerCart}`}
-      >
-        <div className={styles.imageCon}>
-          <Image src={data.image} className={styles.image} alt={data.title} fill />
-        </div>
-        <div className={styles.text}>
-          <h3>{data.title}</h3>
-          <p>{data.category}</p>
-          <p className={styles.linkP}>
-            Visit: <a href={data.link}>{data.title}</a>
-          </p>
-        </div>
+    <section className={styles.section}>
+      <div className={styles.grid}>
+                  <div className={styles.card}>
+            <div className={styles.imageWrapper}>
+              <Image
+                src={data.image}
+                alt={data.title}
+                fill
+                className={styles.image}
+              />
+              <div className={styles.overlay}>
+                <a
+                  href={data.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.button}
+                >
+                  View Project
+                </a>
+              </div>
+            </div>
+            <div className={styles.content}>
+              <h3>{data.title}</h3>
+              <p>{data.category}</p>
+            </div>
+          </div>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default PortfolioCart;
+export default PortfolioSection;

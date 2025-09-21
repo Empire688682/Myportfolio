@@ -24,7 +24,7 @@ const HomePageBanner = () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting && !isVisible) {
           setIsVisible(true); // Set to true when visible
-          const targets = [80, 75, 100]; // Your target numbers
+          const targets = [20, 35, 50]; // Your target numbers
           targets.forEach((target, index) => {
             countUp(target, columnsRef.current[index]);
           });

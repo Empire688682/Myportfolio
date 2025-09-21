@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 import AboutComp from "@/Component/AboutComp/AboutComp";
 import ServiceComp from "@/Component/ServiceComp/ServiceComp";
 import HomePageBanner from "@/Component/HomePageBanner/HomePageBanner";
-import PortfolioCart from "@/Component/PortfolioComp/Portfolio";
+import PortfolioSection from "@/Component/PortfolioComp/Portfolio";
 import { useState, useEffect } from "react";
 import Review from "@/Component/Review/Review";
 import Link from "next/link";
@@ -100,7 +100,7 @@ const HomePage = () => {
                 {[...datas].reverse().slice(0,3).map((data) => {
                   return (
                       <div key={data._id}>
-                        <PortfolioCart
+                        <PortfolioSection 
                           setCategory={setCategory}
                           category={category}
                           data={data}

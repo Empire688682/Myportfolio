@@ -2,7 +2,7 @@
 import styles from "./Portfolio.module.css";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Link from "next/link";
-import PortfolioCart from "@/Component/PortfolioComp/Portfolio";
+import PortfolioSection from "@/Component/PortfolioComp/Portfolio";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import LoadingSpinner from "@/Component/LoadingSpinner/LoadingSpinner";
@@ -34,17 +34,17 @@ const Portfolio = () => {
   return (
     <div className={styles.container}>
       <div className={styles.portfolioHead}>
-        <h1>Portfolio</h1>
+        <h1>Projects</h1>
         <div className={styles.headLinks}>
           <Link href="/" style={{ color: "white", textDecoration: "none" }}>
             Home
           </Link>
           <FaArrowRightLong style={{ width: "50px", color: "white" }} />
           <Link
-            href="/portfolio"
+            href="/project"
             style={{ color: "white", textDecoration: "none" }}
           >
-            Portfolio
+            Projects
           </Link>
         </div>
       </div>
@@ -62,15 +62,15 @@ const Portfolio = () => {
           </p>
           <p
             className={
-              category === "Portfolio" ? styles.active : styles.category
+              category === "Web Apps" ? styles.active : styles.category
             }
             onClick={() =>
               setCategory((prev) =>
-                prev === "Portfolio" ? "All" : "Portfolio",
+                prev === "Web Apps" ? "All" : "Web Apps",
               )
             }
           >
-            Portfolio
+            Web Apps
           </p>
           <p
             className={
@@ -86,68 +86,48 @@ const Portfolio = () => {
           </p>
           <p
             className={
-              category === "Mobile app" ? styles.active : styles.category
+              category === "Mobile apps" ? styles.active : styles.category
             }
             onClick={() =>
               setCategory((prev) =>
-                prev === "Mobile app" ? "All" : "Mobile app",
+                prev === "Mobile apps" ? "All" : "Mobile apps",
               )
             }
           >
-            Mobile App
+            Mobile Apps
           </p>
           <p
             className={
-              category === "Social media" ? styles.active : styles.category
+              category === "AI & Data" ? styles.active : styles.category
             }
             onClick={() =>
-              setCategory(category === "Social media" ? "All" : "Social media")
+              setCategory(category === "AI & Data" ? "All" : "AI & Data")
             }
           >
-            Social Media
-          </p>
-          <p
-            className={category === "Blog" ? styles.active : styles.category}
-            onClick={() =>
-              setCategory((prev) => (prev === "Blog" ? "All" : "Blog"))
-            }
-          >
-            Blog
+            AI & Data
           </p>
           <p
             className={
-              category === "Landing Page" ? styles.active : styles.category
+              category === "Landing Pages & Personal" ? styles.active : styles.category
             }
             onClick={() =>
               setCategory((prev) =>
-                prev === "Landing Page" ? "All" : "Landing Page",
+                prev === "Landing Pages & Personal" ? "All" : "Landing Pages & Personal",
               )
             }
           >
-            Landing Page
-          </p>
-          <p
-            className={
-              category === "Personal Website" ? styles.active : styles.category
-            }
-            onClick={() =>
-              setCategory((prev) =>
-                prev === "Personal Website" ? "All" : "Personal Website",
-              )
-            }
-          >
-            Personal Website
+            Landing Pages & Personal
           </p>
         </div>
         {loading ? (
           <LoadingSpinner />
         ) : (
           <div className={styles.portfolioCart}>
-            {datas.map((data) => {
+            {[...datas].reverse().map((data) => {
               if (category === "All" || category === data.category) {
                 return (
                   <div key={data.id}>
-                    <PortfolioCart
+                    <PortfolioSection
                       setCategory={setCategory}
                       category={category}
                       data={data}
