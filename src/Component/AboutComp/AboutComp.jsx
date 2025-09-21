@@ -13,7 +13,7 @@ import { AboutData } from "../AboutData/AboutData";
 const AboutComp = () => {
   const [moreDetails, setMoreDetails] = useState("PRESENT");
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="about">
       <div className={styles.imageB4}>
         <div className={styles.animation}>
           <Link href="www.linkedin.com/in/asehinde-juwon-73b04b268">

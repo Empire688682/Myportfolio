@@ -82,7 +82,7 @@ const HomePage = () => {
 
       <div className={styles.exportCompCon}>
         <AboutComp />
-        <div className={styles.serviceCompCon}>
+        <div id="service" className={styles.serviceCompCon}>
           <ServiceComp />
         </div>
         <HomePageBanner />

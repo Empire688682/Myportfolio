@@ -10,11 +10,11 @@ const Links = ({ setShowMenu, showMenu }) => {
     },
     {
       title: "About",
-      path: "/about",
+      path: "/#about",
     },
     {
       title: "Service",
-      path: "/service",
+      path: "/#service",
     },
     {
       title: "Projects",
