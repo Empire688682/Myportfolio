@@ -5,7 +5,7 @@ import styles from "./PortfolioSection.module.css";
 const PortfolioSection = ({ data }) => {
   return (
     <section className={styles.section}>
-      <div className={styles.grid}>
+      <div className={styles.wrap}>
         <div className={styles.card}>
           <div className={styles.imageWrapper}>
             <Image

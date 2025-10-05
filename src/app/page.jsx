@@ -98,7 +98,7 @@ const HomePage = () => {
             ) : (
              <div>
                <div className={styles.portfolioCart}>
-                {[...datas].reverse().slice(0,3).map((data) => {
+                {[...datas].reverse().slice(0,4).map((data) => {
                   return (
                       <div key={data._id}>
                         <PortfolioSection 
