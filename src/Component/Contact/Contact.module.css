@@ -1,26 +1,12 @@
 .container {
-  width: 100%;
-  margin-top: 70px;
-}
-.contactHead {
-  background-color: var(--section-bg);
-  min-height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.contactHead h1 {
-  color: white;
-  font-size: 50px;
-}
-.contactHead .headLinks {
-  display: flex;
-  align-items: center;
-}
-.map {
   width: 90%;
   margin: 30px auto;
+}
+.container h1 {
+  color: var(--text-color);
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 .map iframe {
   border: none;
@@ -31,7 +17,6 @@
 }
 .contact {
   display: flex;
-  width: 90%;
   flex-wrap: wrap;
   margin: 50px auto;
 }

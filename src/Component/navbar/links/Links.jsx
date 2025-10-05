@@ -26,7 +26,7 @@ const Links = ({ setShowMenu, showMenu }) => {
     },
     {
       title: "Contact",
-      path: "/contact",
+      path: "/#contact",
     },
   ];
   return (

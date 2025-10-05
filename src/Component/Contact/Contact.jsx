@@ -56,29 +56,9 @@ const Contact = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.contactHead}>
-        <h1>Contact</h1>
-        <div className={styles.headLinks}>
-          <Link
-            id="Link"
-            href="/"
-            style={{ color: "white", textDecoration: "none" }}
-          >
-            Home
-          </Link>
-          <>
-            <FaArrowRightLong style={{ width: "50px", color: "white" }} />
-          </>
-          <Link
-            id="Link"
-            href="/contact"
-            style={{ color: "white", textDecoration: "none" }}
-          >
-            Contact
-          </Link>
-        </div>
-      </div>
+    <div className={styles.container}
+    id="contact">
+      <h1>Contact</h1>
       <div className={styles.map}>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.6980570086575!2d3.4764790736500792!3d6.559746622743857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf27318f770c9%3A0x57a197a85265e736!2s13%20Kosebinu%20St%2C%20Ikorodu%2C%20Ibeshe%20104102%2C%20Lagos!5e0!3m2!1sen!2sng!4v1727440164951!5m2!1sen!2sng"

@@ -13,6 +13,7 @@ import { motion } from "framer-motion";
 import axios from "axios";
 import LoadingSpinner from "@/Component/LoadingSpinner/LoadingSpinner";
 import { useRouter } from "next/navigation";
+import Contact from "@/Component/Contact/Contact";
 
 const HomePage = () => {
   const [category, setCategory] = useState("All");
@@ -119,6 +120,7 @@ const HomePage = () => {
           </div>
         </div>
         <Review />
+        <Contact />
       </div>
     </div>
   );
