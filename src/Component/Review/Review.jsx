@@ -29,11 +29,6 @@ const Review = () => {
         >
           {AllReview.map((review) => (
             <SwiperSlide key={review.id} className={styles.review_slider}>
-              <div className={styles.img_Con_Con}>
-                <div className={styles.img_Con}>
-                  <Image src={review.imageSrc} alt="" fill />
-                </div>
-              </div>
               <h3>{review.name}</h3>
               <p>{review.body}</p>
             </SwiperSlide>

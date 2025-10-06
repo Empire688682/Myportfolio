@@ -74,23 +74,23 @@ const Portfolio = () => {
           </p>
           <p
             className={
-              category === "e-Commerce" ? styles.active : styles.category
+              category === "e-Commerce / Fintech" ? styles.active : styles.category
             }
             onClick={() =>
               setCategory((prev) =>
-                prev === "e-Commerce" ? "All" : "e-Commerce",
+                prev === "e-Commerce / Fintech" ? "All" : "e-Commerce / Fintech",
               )
             }
           >
-            e-Commerce
+            e-Commerce / Fintech
           </p>
           <p
             className={
-              category === "Mobile apps" ? styles.active : styles.category
+              category === "Mobile Apps" ? styles.active : styles.category
             }
             onClick={() =>
               setCategory((prev) =>
-                prev === "Mobile apps" ? "All" : "Mobile apps",
+                prev === "Mobile Apps" ? "All" : "Mobile Apps",
               )
             }
           >

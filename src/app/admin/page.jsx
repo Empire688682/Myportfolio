@@ -38,6 +38,7 @@ const Page = () => {
     formData.append("image", imageUrl);
     formData.append("title", data.title);
     formData.append("category", data.category);
+    formData.append("description", data.description);
     formData.append("link", data.link);
 
     try {
