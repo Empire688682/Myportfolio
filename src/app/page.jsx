@@ -61,7 +61,7 @@ const HomePage = () => {
             applications. From engaging front-end designs to scalable back-end systems,
             I deliver solutions tailored to your vision.
           </p>
-          <Link href="/contact" className={styles.contactBtn}>
+          <Link href="#contact" className={styles.contactBtn}>
             Contact Me
           </Link>
         </motion.div>
