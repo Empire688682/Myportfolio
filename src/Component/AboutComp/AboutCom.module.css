@@ -138,6 +138,7 @@
 
 @media (max-width: 850px) {
   .textCon {
+    text-align: center;
     flex-basis: 100%;
     min-width: 300px;
   }
