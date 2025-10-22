@@ -90,7 +90,7 @@ const HomePage = () => {
         <div className={styles.portfolio}>
           <div className={styles.content}>
             <div className={styles.portfolioConHead}>
-              <h1>Our Featured Projects</h1>
+              <h1>My Featured Projects</h1>
               <p>Who are in extremely love with eco friendly system.</p>
             </div>
             {loading ? (

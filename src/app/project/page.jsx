@@ -50,7 +50,7 @@ const Portfolio = () => {
       </div>
       <div className={styles.content}>
         <div className={styles.portfolioConHead}>
-          <h1>Our All Featured Projects</h1>
+          <h1>My All Featured Projects</h1>
           <p>Who are in extremely love with eco-friendly systems.</p>
         </div>
         <div className={styles.categories}>

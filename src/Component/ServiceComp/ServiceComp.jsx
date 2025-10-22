@@ -7,7 +7,7 @@ const ServiceComp = () => {
   return (
     <div className={styles.container}>
       <div className={styles.conHead}>
-        <h1>My Offered Services</h1>
+        <h1>My  Offered Services</h1>
         <p className={styles.header_p}>
           At Jay-Empire, I&#39;m dedicated to providing a comprehensive suite of
           services designed to elevate your online presence and drive your
