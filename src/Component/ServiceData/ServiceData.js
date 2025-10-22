@@ -20,7 +20,7 @@ export const serviceData = [
     text: "Ongoing support to keep your website running smoothly, allowing you to focus on what you do best.",
   },
   {
-    image: "/maintenance_support.png",
+    image: "/Maintenance_Support.png",
     title: "Consultation Services",
     text: "Unsure of where to start? I offer expert consultations to help you identify your needs and develop a strategic plan that aligns with your goals.",
   },
