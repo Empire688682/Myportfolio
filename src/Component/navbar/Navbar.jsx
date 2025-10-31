@@ -4,7 +4,7 @@ import styles from "./Navbar.module.css";
 import Links from "./links/Links";
 import Link from "next/link";
 
-const Navbar = ({ theme, toggleTheme }) => {
+const Navbar = ({ theme, setTheme }) => {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
@@ -14,17 +14,10 @@ const Navbar = ({ theme, toggleTheme }) => {
           <img src="/favicon.ico" alt="logo" width="40px" />
         </div>
       </Link>
-      <div className={styles.modeCon}>
-        {theme === "light" ? (
-          <div className={styles.icons} onClick={() => toggleTheme()}>
-            <img src="/moon_icon.png" alt="moon icon" width="20px" />
-          </div>
-        ) : (
-          <div className={styles.icons} onClick={() => toggleTheme()}>
-            <img src="/sun_icon.png" alt="sun icon" width="20px" />
-          </div>
-        )}
-      </div>
+      <div className={styles.modeIcons} >
+          <img src="/moon_icon.png" alt="moon icon" width="20px" onClick={() => setTheme("dark")} />
+          <img src="/sun_icon.png" alt="sun icon" width="20px" onClick={() => setTheme("light")} />
+       </div>
       <div onClick={() => setShowMenu(!showMenu)}>
         <Links setShowMenu={setShowMenu} showMenu={showMenu} />
       </div>
