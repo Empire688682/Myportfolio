@@ -19,6 +19,7 @@
   --mobile-bg: rgba(0, 0, 0, 0.7);
   --blogHome-bg: #f9f9ff;
   --heading-color: black;
+  --themeBg-color: black;
 }
 .dark-mode {
   --navbar-color: rgba(0, 0, 0, 1);
@@ -33,6 +34,7 @@
   --mobile-bg: rgba(0, 0, 0, 1);
   --blogHome-bg: rgba(0, 0, 0, 0.9);
   --heading-color: white;
+  --themeBg-color:  #fff;
 }
 body {
   font-family: "Poppins", sans-serif;

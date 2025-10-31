@@ -15,8 +15,8 @@ const Navbar = ({ theme, activateTheme }) => {
         </div>
       </Link>
       <div className={styles.modeIcons} >
-          <img src="/moon_icon.png" alt="moon icon" width="20px" onClick={() => activateTheme("dark")} />
-          <img src="/sun_icon.png" alt="sun icon" width="20px" onClick={() => activateTheme("light")} />
+          <img className={styles.moon} src="/moon_icon.png" alt="moon icon" title="dark mode" width="30px" onClick={() => activateTheme("dark")} />
+          <img className={styles.sun} src="/sun_icon.png" alt="sun icon" title="light mode" width="30px" onClick={() => activateTheme("light")} />
        </div>
       <div onClick={() => setShowMenu(!showMenu)}>
         <Links setShowMenu={setShowMenu} showMenu={showMenu} />
