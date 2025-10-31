@@ -27,11 +27,18 @@ export default function RootLayout({ children }) {
     }
   }, [theme]);
 
-  const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
+
+  function activateTheme(selectedTheme) {
+    let newTheme;
+    if (selectedTheme === "light") {
+      setTheme(selectedTheme);
+      newTheme = "light"
+    } else if (selectedTheme === "dark") {
+      setTheme(selectedTheme);
+      newTheme = "dark"
+    }
     localStorage.setItem("theme", newTheme);
-  };
+  }
 
   return (
     <html lang="en">
@@ -45,7 +52,7 @@ export default function RootLayout({ children }) {
       </Head>
       <body className={theme === "light" ? "container" : "container dark-mode"}>
         <AppProvider>
-          <Navbar theme={theme} setTheme={setTheme} toggleTheme={toggleTheme} />
+          <Navbar theme={theme} activateTheme={activateTheme} />
           <div className="Content">{children}</div>
           <Footer />
         </AppProvider>
