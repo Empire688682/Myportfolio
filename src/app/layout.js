@@ -6,10 +6,10 @@ import { useState, useEffect } from "react";
 import Head from "next/head";
 import { AppProvider } from "@/Component/Context";
 
-export const metadata = {
-title: "JayEmpire",
- description: "This is Juwon Asehinde Personal Portfolio",
-};
+//export const metadata = {
+//title: "JayEmpire",
+// description: "This is Juwon Asehinde Personal Portfolio",
+//};
 
 export default function RootLayout({ children }) {
   const [theme, setTheme] = useState("light");
